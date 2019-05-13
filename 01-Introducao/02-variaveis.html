@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Variáveis</title>
+</head>
+
+<body>
+    <h1>Curso JavaScript - Variáveis</h1>
+
+
+
+    <script>
+        // Escopo global
+        var nome = "Marcelo"
+        var sobrenome = "Pereira"
+        var nomeCompleto = nome + " " + sobrenome
+
+        console.log(nomeCompleto)
+
+
+        // Escolo local
+        function fullName(){
+            var nomeCompleto2 = nome + " " + sobrenome
+            return nomeCompleto2
+        }
+        // Imprime resultado da função
+        console.log(fullName())
+
+        // Neste caso vai ocorrer um erro, pois na função
+        // a vaiável foi declarada em escopo local
+        // console.log(nomeCompleto2)
+
+
+        // Declaração "let" - ES6
+        nota1 = 8
+        nota2 = 9
+        function notaFinal(){
+            // Declarando variável de escopo local
+            let media = (nota1 + nota2) / 2
+            return media
+        }
+
+        console.log(notaFinal())
+        // Vai gerar um erro no console
+        // console.log(media)
+
+
+        // Const - ES6 
+        // Uma variável que não pode ser alterada
+        const animal = "gato"
+        console.log(animal)
+
+        // Vai gerar um erro, pois a variável não pode ser alterada
+        // animal = "cachorro"
+    </script>
+
+
+
+</body>
+
+</html>

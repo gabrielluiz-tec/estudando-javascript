@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Funções</title>
+</head>
+
+<body>
+    <h1>Curso JavaScript - Funções</h1>
+
+
+
+
+
+    <script>
+
+        // Funções podem retornar algo ou não
+        // Declaramos uma nova função 
+        // Definimos o nome da função como "soma"
+        // Passamos dois "parâmentros"
+        function soma(n1, n2) {
+            return n1 + n2
+        }
+
+        // Nova função "multiplica"
+        function multiplica(n1, n2) {
+            return n1 * n2;
+        }
+
+        // Chamando a função e passando dois valores "argumentos"
+        // Será impresso no console o resultado da soma dos 2 números
+        console.log(soma(2, 40))
+
+        // Chamando a função e passando dois valores "argumentos"
+        // Será impresso no console o resultado da multiplicação entre 2 números
+        console.log(multiplica(2, 40))
+    </script>
+
+
+    <script>
+        var pessoa = {
+            nome: "João da Silva",
+            idade: 30,
+            cidade: "São Paulo"
+        };
+
+        // Imprimindo pessoa
+        console.log(pessoa)
+
+        function novaPessoa(nome, idade, cidade) {
+            pessoa.nome = nome;
+            pessoa.idade = idade;
+            pessoa.cidade = cidade;
+        };
+
+        novaPessoa("Marcelo", 40, "Porto Alegre");
+
+        // Imrimindo nova pessoa
+        console.log(pessoa);
+    </script>
+</body>
+
+</html>

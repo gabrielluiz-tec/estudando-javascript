@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Condicionais</title>
+</head>
+
+<body>
+    <h1>Curso JavaScript - Condicionais</h1>
+
+
+
+
+
+
+    <script>
+        // Condição "if / else if / else"
+        var maiorDeIdade = 18;
+        // Faça o tste alterando o valor da variável "idade"
+        // Verifique o resultado no console
+        var idade = 17;
+
+        // Assim que a condição for VRDADEIRA executa o comando e para
+        // ou seja, será impressa apenas uma das mensagens abaixo
+        if (idade >= 60) {
+            console.log("Idoso")
+        } else if (idade < 0) {
+            console.log("Idade inválida")
+        } else if (idade >= maiorDeIdade) {
+            console.log("Maior de idade")
+        } else {
+            console.log("Menor de indade")
+        }
+    </script>
+
+
+    <script>
+        // Condição "switch"
+        var mesAniverario = '07'
+
+        switch (mesAniverario) {
+            case '01':
+                console.log("Nasceu em Janeiro")
+                break;
+            case '02':
+                console.log("Nasceu em Fevereiro")
+                break;
+            case '03':
+                console.log("Nasceu em Março")
+                break;
+            case '04':
+                console.log("Nasceu em Abril")
+                break;
+            case '05':
+                console.log("Nasceu em Maio")
+                break;
+            case '06':
+                console.log("Nasceu em Junho")
+                break;
+            case '07':
+                console.log("Nasceu em Julho")
+                break;
+            case '08':
+                console.log("Nasceu em Agosto")
+                break;
+            case '09':
+                console.log("Nasceu em Setembro")
+                break;
+            case '10':
+                console.log("Nasceu em Outubro")
+                break;
+            case '11':
+                console.log("Nasceu em Novembro")
+                break;
+            case '12':
+                console.log("Nasceu em Dezembro")
+                break;
+            default:
+                console.log("Mês inválido")
+                break;
+        }
+    </script>
+
+</body>
+
+</html>

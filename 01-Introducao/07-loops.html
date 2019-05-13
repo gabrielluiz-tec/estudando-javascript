@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Loops</title>
+</head>
+
+<body>
+    <h1>Curso JavaScript - Loops</h1>
+
+
+    <div class="js">react</div>
+    <div class="js">angular</div>
+    <div class="js">typescript</div>
+    <div class="js">es6</div>
+
+
+
+
+    <script>
+        // Buscando elemento pela classe
+        var listaCursos = document.getElementsByClassName('js');
+
+        // Laço de repetição "for"
+        for(let i = 0; i < listaCursos.length; i++) {
+            // Armaena o conteúdo de "i"
+            let texto = listaCursos[i].innerHTML;
+            listaCursos[i].innerHTML = "Curso de " + texto + " JS"
+        }
+    </script>
+
+
+    <script>
+        // Laço de repetição "forEach"
+        array = ["pão", "queijo", "café", "presunto"]
+        // Aqui vamos percorrer o array
+        array.forEach(function(element, index) {
+            // Imprime em uma nova linha cada elemento e seu indice
+            console.log(element, index);
+            // Aqui efetuamos um teste condicional
+            if(element == "pão") {
+                array[index] = "Pão integral";
+            }
+        });
+        // Aqui imprimimos o array modificado
+        console.log(array);
+    </script>
+
+
+    <script>
+        // Utilizando "map"
+        // Paa altra o array é necessário criar uma cópia
+        var novaLista = array.map(function(element, index){
+            if(element == "café"){
+                element = "Café solúvel";
+            }
+            return element;
+        })
+        console.log(novaLista);
+    </script>
+
+
+    <script>
+        // laço de repetição "while"
+        var cont = 0;
+        while(cont < 5) {
+            console.log('rodando...')
+            cont++;
+        }
+    </script>
+
+</body>
+
+</html>

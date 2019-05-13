@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Eventos</title>
+</head>
+
+<body>
+    <h1 id="title">Curso JavaScript - Eventos</h1>
+
+    <button id="btn">Clique aqui</button>
+    <button id="btn2">APAGA TUDO</button>
+
+
+
+
+    <script>
+
+        // Verificando se a página foi carregada
+        window.onload = function() {
+            console.log('Página carregada')
+        }
+
+        // Evento de clique
+        var botao = document.getElementById('btn');
+        var titulo = document.getElementById('title');
+        
+        // Evento do JavaScript
+        botao.addEventListener('click', function(){
+            alert('Você removeu o título.')
+            titulo.remove();
+        })
+
+
+        // Criando evento para apagar todo conteúdo do "body"
+        var botao2 = document.getElementById('btn2')
+        var pagina = document.getElementsByTagName('body')[0]
+        botao2.addEventListener('click', function() {
+            pagina.remove()
+        })
+
+    </script>
+</body>
+
+</html>

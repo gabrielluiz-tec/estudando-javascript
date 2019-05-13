@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Objetos</title>
+</head>
+
+<body>
+    <h1>Curso JavaScript - Objetos</h1>
+
+
+
+
+
+
+    <script>
+
+        var animal = {
+            especie: 'felino',
+            raca: 'vira-lata',
+            cor: 'preto',
+            idade: 3,
+            dadosDoDono: {
+                nome: 'Maria Silva',
+                aniversario: '10-05-1980'
+            }
+        }
+
+        // Retorna a cor do animal
+        console.log(animal.cor)
+        console.log(animal['raca'])
+        // Retorna o nome do dono do animal
+        console.log(animal.dadosDoDono.nome)
+
+        // Retorna o tipo de dado
+        console.log(typeof(animal))
+
+    </script>
+
+</body>
+</html>
