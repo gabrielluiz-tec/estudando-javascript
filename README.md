@@ -76,3 +76,5 @@ NaN significa "Not-A-Number" e é constantemente retornado indicando um erro com
 
 // tentar dividir uma string por 5 retornará NaN
 > "hello"/5
+
+
