@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <!-- Evento de click -->
+    <div id="elements">
+        <p>1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>2 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>3 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>4 - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Aqui eu digo que não quero que o evento seja aplicado para o último parágrafo.
+            $("p:not(p:last-child)").click(function(){
+                alert("Evento disparado!");
+            });
+        });
+    </script>
+    <!-- Fim evento de click -->
+
+</body>
+</html>
