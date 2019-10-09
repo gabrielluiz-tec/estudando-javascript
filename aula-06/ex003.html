@@ -25,10 +25,15 @@
         // Number(n)
         // Number.parseInt(n)
         // Number.parseFloat(n)
-        var n1 = Number.parseInt(window.prompt('Digite um número:'))
-        var n2 = Number.parseInt(window.prompt('Digite outro número:'))
-        soma = n1 + n2
-        alert(`A soma é: ${soma}`)
+        // var n1 = Number.parseInt(window.prompt('Digite um número:'))
+        // var n2 = Number.parseInt(window.prompt('Digite outro número:'))
+        // soma = n1 + n2
+        // alert(`A soma é: ${soma}`)
+        var bg = window.prompt('Digite uma cor hexadecimal para o background:')
+        var txt = window.prompt('Digite uma cor hexadecimal para o texto:')
+        document.body.style.background = `#${bg}`
+        document.body.style.color = `#${txt}`
+
 
     </script>
 </body>
