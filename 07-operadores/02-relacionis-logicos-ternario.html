@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 04 - Exemplo 01</title>
+</head>
+<body>
+
+    <h1>Operadores relacionais, lógicos e ternário</h1>
+
+    <script>
+        // Operdores relacionais
+        console.log("Operadores relacionais")
+        console.log(5 > 2) // Maior que
+        console.log(5 < 2) // Menor que
+        console.log(5 >= 2) // Maior ou igual que
+        console.log(5 <= 2) // Menor ou igual que
+        console.log(5 == 2) // Igual
+        console.log(5 != 2) // Diferente
+        console.log("2" === 2) // Igual em valor e tipo
+        
+        // Operadores lógicos
+        console.log("Operadores lógicos")
+        console.log(!false) // ! - negação - NÃO
+        console.log(true && false) // && - conjunção - E
+        console.log(true || false) // || - disjunção - OU
+
+        /***********************************
+         * Oredem de precidência
+         * 
+         * Operadores aritiméticos
+         * () ** / * % ... etc
+         * 
+         * Operadores relacionais
+         * > < .. etc
+         * 
+         * Operadores lógicos (nesta ordem)
+         * !
+         * &&
+         * ||
+         *
+         * *********************************/
+
+
+        // Operador ternário (três blocos)
+        // [teste] ? [true] : [false]
+        console.log("Operador ternário")
+        var media = 9
+        console.log(media >= 7 ? "Aprovado" : "Reprovado")
+
+
+    </script>
+</body>
+</html>

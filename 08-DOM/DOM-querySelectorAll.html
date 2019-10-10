@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - querySelectorAll</title>
+</head>
+<body>
+    <h1>DOM - querySelectorAll</h1>
+    <p>Como acessa elementos html via ".querySelectorAll"</p>
+
+    <div class="teste">1</div>
+    <div class="teste">2</div>
+    <div class="teste">3</div>
+
+    
+    <div id="pai">
+        <div class="filho">11</div>
+        <div class="filho">22</div>
+        <div class="filho">33</div>
+    </div>
+
+    <div id="avo">
+        <div class="filho">111</div>
+        <div class="filho">222</div>
+        <div class="filho">333</div>
+    </div>
+
+    <script>
+        console.log(
+            document.getElementById('pai').querySelectorAll('.filho')[0]
+        )
+
+        console.log(
+            document.getElementById('avo').querySelectorAll('.filho')[0]
+        )
+    </script>
+
+</body>
+</html>

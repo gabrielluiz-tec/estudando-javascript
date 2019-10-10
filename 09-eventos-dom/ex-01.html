@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercícios - DOM</title>
+
+    <style>
+        #area {
+            background-color: greenyellow;
+            font-family: sans-serif;
+            color: #FFF;
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+            font-size: 2rem;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- Buscar no ste MDN - (event reference javascript) -->
+
+    <!-- <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> -->
+    <div id="area">
+        Interaja..
+    </div>
+
+    <script>
+
+        let caixa = document.getElementById('area')
+
+        // Monitorando eventos
+        caixa.addEventListener('click', clicar)
+        caixa.addEventListener('mouseenter', entrar)
+        caixa.addEventListener('mouseout', sair)
+        
+        function clicar() {
+            caixa.innerText = 'Clicou!'
+            caixa.style.background = 'orange'
+        }
+
+        function entrar() {
+            caixa.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            caixa.innerText = 'Saiu!'
+            caixa.style.backgroundColor = 'greenyellow'
+        }
+        
+    </script>
+
+</body>
+</html>

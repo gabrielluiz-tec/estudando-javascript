@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript - DOM</title>
+
+    <style>
+        body {
+            background-color: #222;
+            color: #AAA;
+            font-family: sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- DOM: Document Object Model -->
+    <!-- Presente dentro dos navegadores -->
+    <!-- Não está presente no NODE JS -->
+
+    <!-- 
+                | -> location
+        window  | -> document
+                | -> history
+     -->
+    
+    <h1 id="titulo">Primeiros passo com DOM</h1>
+    <p>Document Object Model</p>
+    <p>Estudando obre <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg" name="msg">Clique aqui</div>
+    <br>
+
+    <script>
+        // window.document.writeln(window.document.charset)
+        // window.document.writeln(window.location)
+        // window.document
+        // window.history
+        // document.location.origin
+        // document.location.port
+        // document.location.pathname
+        // document.location.protocol
+        // document.title
+
+        let titulo = window.document.getElementById('titulo')
+        let corpo = window.document.body
+        let p1 = window.document.getElementsByTagName('p')[1] // necessita informar a posição
+        window.document.writeln('Conteúdo do p: ' + p1.innerText)
+        window.document.writeln('Conteúdo do p: ' + p1.innerHTML)
+
+        corpo.style.background = 'black'
+        p1.style.color = 'yellow'
+        titulo.style.backgroundColor = 'green'
+        titulo.innerHTML = '<h6>título alterado...</h6>'
+        // titulo.innerText = 'título alterado...'
+        let mensagem = document.getElementsByName('msg')[0] // necessita informar a posição
+        mensagem.innerText = 'Olá!!!'
+
+        mensagem = document.querySelector('#msg') // Método mais recente
+        mensagem.style.color = 'red'
+
+
+
+    </script>
+
+</body>
+</html>

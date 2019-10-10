@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - querySelector</title>
+</head>
+<body>
+    <h1>DOM - querySelector</h1>
+    <p>Como acessa elementos html via ".querySelector"</p>
+
+    <div id="teste">div 01</div>
+    <div class="teste">div 02</div>
+    <p>Texto 01</p>
+    <p class="teste">Texto 02</p>
+
+
+    <script>
+        // Retorna elemento html pelo ID
+        console.log(
+            document.querySelector('#teste')
+        )
+
+        // Retorna elemento html pela Classe
+        // Retorna somente o primeiro elemento desta classe
+        console.log(
+            document.querySelector('.teste').innerHTML
+        )
+        
+
+        // Acessando o paragrafo com a classe ".teste"
+        console.log(
+            document.querySelector('p.teste').innerHTML
+        )
+    </script>
+
+</body>
+</html>

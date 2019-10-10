@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - createElement</title>
+</head>
+<body>
+    <h1>DOM - createElement</h1>
+    <p>Como criar elementos html com ".createElement"</p>
+
+
+
+    <script>
+        // Criando uma DIV
+        console.log(
+            // Imprime no console o elemento criado
+            document.createElement('div')
+        )
+
+
+        // criando uma variável
+        var img = document.createElement('img');
+        img.src="http://lorempixel.com/400/200/";
+        // Imprime no console a TAG criada
+        console.log(img)
+
+        // Criando um elemento "p"
+        var p = document.createElement('p');
+        p.innerHTML = "Olá"
+        console.log(p)
+    </script>
+
+</body>
+</html>

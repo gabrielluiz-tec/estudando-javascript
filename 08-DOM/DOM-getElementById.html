@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - getElementById</title>
+</head>
+<body>
+    <h1>DOM - getElementById</h1>
+
+    
+    <p>Como acessar um ID pelo ".getElementById"</p>
+
+    <div id="div-1">
+        Conteúdo da div 01
+    </div>
+
+    <div id="div-2">
+        Conteúdo da div 02
+    </div>
+
+
+    <script>
+        // Imprime no console a DIV inteira
+        console.log(
+            document.getElementById("div-1")
+        )
+
+        // Imprime no console o conteúdo da DIV
+        console.log(
+            document.getElementById("div-2").innerHTML
+        )
+    </script>
+
+</body>
+</html>

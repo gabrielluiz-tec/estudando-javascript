@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - ggetElementsByClassName</title>
+</head>
+<body>
+    <h1>DOM - getElementsByClassName</h1>
+
+    <p>Como acessar uma classe pelo ".getElementsByClassName"</p>
+
+    <div class="animal">
+        Pato
+    </div>
+
+
+    <div class="animal">
+        Cavalo
+    </div>
+
+    <p class="animal">Um parágrafo com classe animal</p>
+
+
+    <script>
+        // Retorna o conteúdo das TAGs com a classe "animal"
+        console.log(
+            document.getElementsByClassName('animal')[0].innerHTML
+        )
+
+        // Retora a coleção
+        console.log(
+            document.getElementsByClassName('animal')
+        )
+    </script>
+
+</body>
+</html>

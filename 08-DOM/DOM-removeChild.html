@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - removeChild</title>
+</head>
+<body>
+    <h1>DOM - removeChild</h1>
+    <p>Como remover um elemento ".removeChild"</p>
+
+    <!-- Criamos uma DIV vazia com um ID -->
+    <div id="conteudo">
+        <!-- vazia -->
+    </div>
+
+
+    
+
+    <script>
+        // Criamos uma variável "p" e atribuimos o elemento criado
+        var texto1 = document.createElement('p');
+        // Atribuimos uma texto a vaiável
+        texto1.innerHTML = "Estudando JavaScript";
+
+        // Criamos uma variável "p" e atribuimos o elemento criado
+        var texto2 = document.createElement('p');
+        // Atribuimos uma texto a vaiável
+        texto2.innerHTML = "Removendo elementos com JavaScript";
+
+        // Accessamos a div pelo seu ID e inserimos o elemento "p"
+        document.getElementById('conteudo').appendChild(texto1)
+        document.getElementById('conteudo').appendChild(texto2)
+
+        // Aqui vamos remover um dos textos com "removeChild"
+        document.getElementById('conteudo').removeChild(texto1)
+
+    </script>
+
+
+</body>
+</html>

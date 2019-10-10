@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - getElementsByTagName</title>
+</head>
+<body>
+    <h1>DOM - getElementsByTagName</h1>
+    <p>Como elementos de uma TAG específica no html via ".getElementsByTagName"</p>
+
+    <head></head>
+
+    <button>Olá</button>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <footer>
+        <p>Texto do meu rodapé.</p>
+    </footer>
+
+    <script>
+        // Retorna o elemento html
+        console.log(
+            document.getElementsByTagName('head')
+        )
+
+
+
+        // Retorna o conteúdo da tag button
+        console.log(
+            document.getElementsByTagName('button')[0].innerHTML
+        )
+
+        // Retorna o elemento html
+        console.log(
+            document.getElementsByTagName('footer')[0]
+        )
+    </script>
+
+</body>
+</html>

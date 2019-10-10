@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM - appendChild</title>
+</head>
+<body>
+    <h1>DOM - appendChild</h1>
+    <p>Como inserir um elemento dentro do outro com ".appendChild"</p>
+
+    <!-- Criamos uma DIV vazia com um ID -->
+    <div id="conteudo">
+        <!-- vazia -->
+    </div>
+
+    <!-- Criamos uma DIV vazia com um ID "imagem" -->
+    <div id="imagem">
+        <!-- vazia -->
+    </div>
+
+
+    <script>
+        // Criamos uma variável "p" e atribuimos o elemento criado
+        var p = document.createElement('p');
+        // Atribuimos uma texto a vaiável
+        p.innerHTML = "Estudando JavaScript";
+
+        // Accessamos a div pelo seu ID e inserimos o elemento "p"
+        document.getElementById('conteudo').appendChild(p)
+    </script>
+
+
+
+    <script>
+        // Aqui eu criei uma variável "img"
+        // Depois criei um elemento tipo "img"
+        var img = document.createElement('img');
+        // Aqui coloco o caminho da imagem
+        img.src = "http://lorempixel.com/400/200/";
+        // Aqui coloco o texto alternativo da imagem
+        img.alt = "Testo alternativo da imagm";
+        // Aqui insiro a imagem na DIV com "id=imagem"
+        document.getElementById('imagem').appendChild(img)
+    </script>
+
+</body>
+</html>
