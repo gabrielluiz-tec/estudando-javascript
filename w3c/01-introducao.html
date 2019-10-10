@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript - Introdução</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Teste js....</h1>
+    
+    <button type="button" onclick="document.querySelector('h1').style.fontSize = '3rem'">Aumentar fonte</button>
+
+    <button type="button" onclick="document.querySelector('h1').innerHTML = 'O título mudou!!!'">Alterar título</button>
+
+    <br><br>
+
+    <button type="button" onclick="document.querySelector('.conteudo').innerHTML = 'Clicou 01!' ">Btn 01</button>
+    <div class="conteudo"></div>
+    
+    <button type="button" onclick="document.getElementById('conteudo').innerHTML = 'Clicou 02!' ">Btn 02</button>
+    <div id="conteudo"></div>
+    
+    <button type="button" onclick="document.getElementById('data').innerHTML = Date() ">Ver sata</button>
+    <div id="data"></div>
+    
+
+</body>
+</html>

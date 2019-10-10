@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript - Introdução</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>JavaScript - Funções</h1>
+    
+    <p id="texto">Este texto estava oculto!</p>
+
+    <button type="button" onclick="alteraTexto()">Alterar texto</button>
+
+    <!-- Invocando a função "multiplica" -->
+    <p class="resultado">O resultado é: <strong><span></span></strong></p>
+
+
+
+
+    <script>
+        function alteraTexto() {
+            document.getElementById("texto").innerHTML = "Novo texto";
+            // Usar este método apenas para testes...
+            // Apaga todo conteúdo existente
+            // document.writeln("Outro texto");
+        }
+
+        // Função multiplica números
+        function multiplica(n1, n2) {
+            return n1 * n2
+        }
+        document.querySelector(".resultado span").innerHTML = multiplica(2, 6);
+
+    </script>
+
+
+
+
+</body>
+</html>

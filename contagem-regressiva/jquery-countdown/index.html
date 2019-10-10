@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Teste</title>
+</head>
+<body>
+
+
+
+	<link rel="stylesheet" href="css/jquery.countdown.css">
+	<style type="text/css">
+	#defaultCountdown { width: 240px; height: 45px; }
+	</style>
+	
+	<div id="defaultCountdown"></div>
+	
+
+	<!-- Scripts JS -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/jquery.plugin.min.js"></script>
+	<script src="js/jquery.countdown.js"></script>
+	<script>
+		$(function () {
+			var austDay = new Date();
+			austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+			$('#defaultCountdown').countdown({until: austDay});
+			$('#year').text(austDay.getFullYear());
+		});
+		
+		</script>
+
+		<script>
+			(function($) {
+				'use strict';
+				$.countdown.regionalOptions['pt-BR'] = {
+					labels: ['Anos','Meses','Semanas','Dias','Horas','Minutos','Segundos'],
+					labels1: ['Ano','Mês','Semana','Dia','Hora','Minuto','Segundo'],
+					compactLabels: ['a','m','s','d'],
+					whichLabels: null,
+					digits: ['0','1','2','3','4','5','6','7','8','9'],
+					timeSeparator: ':',
+					isRTL: false
+				};
+				$.countdown.setDefaults($.countdown.regionalOptions['pt-BR']);
+			})(jQuery);
+		</script>
+
+
+</body>
+</html>

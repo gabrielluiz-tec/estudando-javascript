@@ -1,0 +1,26 @@
+body {
+    color: #AAA;
+    font-family: sans-serif;
+    background-color: #222;
+    font-size: 1rem;
+}
+
+button {
+    margin: 5px; 
+    padding: 10px 5px; 
+    min-width: 130px; 
+    color: #FFF;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    border: 0;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(50, 93, 173);
+}
+
+div {
+    margin: 10px;
+}
