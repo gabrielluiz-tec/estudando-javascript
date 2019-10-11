@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript - DOM</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 1rem;
+        }
+        input { 
+            font-size: 1.4rem;
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Estudando JavaScript - DOM</h1>
+    <h3>Somando números</h3>
+
+    <input type="number" name="txt-num-1" id="id-num-1"> +
+    <input type="number" name="txt-num-2" id="id-num-2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="resultado">Resultado</div>
+    
+    <script>
+        function somar() {
+            var n1 = Number(document.getElementById('id-num-1').value)
+            var n2 = Number(document.getElementById('id-num-2').value)
+            let result = document.querySelector('#resultado')
+            
+            if ((n1 == '') || (n2 == '')) {
+                result.innerHTML = 'Por favor digite dois números'
+            } else {
+                let soma = n1 + n2
+                result.innerHTML = `A soma de ${n1} + ${n2} é: <strong>${soma}</strong>`
+            }
+        }
+    </script>
+
+</body>
+</html>

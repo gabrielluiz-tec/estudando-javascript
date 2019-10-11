@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de multas</title>
+    <style>
+        body {font-family: sans-serif; }
+    </style>
+</head>
+<body>
+    
+    <h1>Sistema de multas</h1>
+
+    Velocidade do carro: <input type="number" name="" id="vel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado"></div>
+
+
+    <script>
+        function calcular() {
+            let velocidade = document.querySelector('#vel').value
+            let result = document.querySelector('#resultado')
+            result.innerHTML = `<p>A sua velocidade atual é <strong>${velocidade} Km/h</strong></p>`
+
+            if (velocidade > 60) {
+                result.innerHTML += '<p>Você ultrapassou a velocidade permitida. MULTADO.</p>'
+            }
+            result.innerHTML += '<p>Use sempre cinto de segurança!</p>'
+        }
+    </script>
+
+</body>
+</html>
