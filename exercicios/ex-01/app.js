@@ -7,10 +7,12 @@ function carregar() {
     
     // Pegando hora atual
     let data = new Date()
-    let horaAtual = `${data.getHours()}h${data.getMinutes()}min`
+    let hora = data.getHours()
+    let minutos = data.getMinutes()
+    let horaAtual = `${data.getHours()}${data.getMinutes()}`
 
     // Mensagem ao usuáro
-    if (horaAtual >= 0 && horaAtual < 12) {
+    if (horaAtual >= 0000 && horaAtual < 1200) {
 
         // Saudação ao usuário
         saudacao.innerHTML = '<strong>Bom dia!</strong> <br>'
@@ -19,7 +21,7 @@ function carregar() {
         // Alterando plano de fundo conforme hora atual
         document.body.className = 'bg bg-manha'
 
-    } else if (horaAtual >= 12 && horaAtual <= 18) {
+    } else if (horaAtual >= 1200 && horaAtual <= 1800) {
 
         // Saudação ao usuário
         saudacao.innerHTML = '<strong>Boa tarde!</strong> <br>'
@@ -40,6 +42,6 @@ function carregar() {
     }
 
     // Finalizando saudação ao usuário
-    saudacao.innerHTML += `Agora são ${horaAtual}.`
+    saudacao.innerHTML += `Agora são ${hora}h${minutos}min.`
 
 }
