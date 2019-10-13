@@ -50,15 +50,15 @@ img {
 }
 
 .bg-manha {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/manha.jpg');
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('images/manha.jpg');
 }
 
 .bg-tarde {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/tarde.jpg');
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('images/tarde.jpg');
 }
 
 .bg-noite {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/noite.jpg');
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0.7)), url('images/noite.jpg');
 }
 
 

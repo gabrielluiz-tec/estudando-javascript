@@ -8,7 +8,7 @@ function carregar() {
     // Pegando hora atual
     let data = new Date()
     // let horaAtual = data.getHours()
-    let horaAtual = 19
+    let horaAtual = 1
 
     // Mensagem ao usuáro
     if (horaAtual >= 0 && horaAtual < 12) {
