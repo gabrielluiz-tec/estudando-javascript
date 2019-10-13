@@ -9,7 +9,7 @@ function carregar() {
     let data = new Date()
     let hora = data.getHours()
     let minutos = data.getMinutes()
-    let horaAtual = `${data.getHours()}${data.getMinutes()}`
+    let horaAtual = `${hora}${minutos}`
 
     // Mensagem ao usuáro
     if (horaAtual >= 0000 && horaAtual < 1200) {
