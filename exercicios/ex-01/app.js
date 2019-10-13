@@ -7,7 +7,7 @@ function carregar() {
     
     // Pegando hora atual
     let data = new Date()
-    let horaAtual = data.getHours()
+    let horaAtual = `${data.getHours()}h${data.getMinutes()}min`
 
     // Mensagem ao usuáro
     if (horaAtual >= 0 && horaAtual < 12) {
@@ -40,6 +40,6 @@ function carregar() {
     }
 
     // Finalizando saudação ao usuário
-    saudacao.innerHTML += `Agora são ${horaAtual} horas.`
+    saudacao.innerHTML += `Agora são ${horaAtual}.`
 
 }
