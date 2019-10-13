@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App País</title>
+    <style>
+        body {font-family: sans-serif; }
+    </style>
+</head>
+<body>
+    
+    <h1>App País</h1>
+
+    Digite seu País: <input type="text" name="" id="pais">
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+    <div id="resultado"></div>
+
+
+    <script>
+        function nacionalidade() {
+
+            let pais = document.querySelector('#pais').value
+            let result = document.querySelector('#resultado')
+
+            if (pais == '') {
+                result.innerHTML = '<p>Por favor digite o seu país</p>'
+            }
+            else if (pais != 'brasil') {
+                result.innerHTML = '<p>Estrangeiro</p>'
+            } else {
+                result.innerHTML = '<p>Brasileiro</p>'
+            }
+        }
+    </script>
+
+</body>
+</html>
