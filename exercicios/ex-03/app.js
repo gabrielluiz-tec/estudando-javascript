@@ -11,14 +11,12 @@ function contar() {
     resultado.innerHTML = ''
 
     if (inicio == 0 || fim == 0 || passo == 0) {
-        resultado.innerHTML = 'Erro: Por pavor preencha todos os campos'
+        resultado.innerHTML = '<strong>Erro:</strong> Por pavor preencha todos os campos'
     } else {
         
         for (inicio; inicio <= fim; inicio+=passo) {
             resultado.innerHTML += `${inicio} 😀 `
         }
-        
         resultado.innerHTML += '👍'
     }
-
 }
