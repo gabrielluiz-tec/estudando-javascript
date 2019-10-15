@@ -17,6 +17,10 @@ body {
     align-items: center;
 }
 
+header {
+    padding: 30px;
+}
+
 section {
     min-width: 300px;
     background-color: white;
@@ -38,6 +42,12 @@ input {
     padding: 5px;
 }
 
+#resultado {
+    margin: 15px 5px 5px;
+    text-align: center;
+}
+
 footer {
+    padding: 30px;
     font-size: 1rem;
 }
