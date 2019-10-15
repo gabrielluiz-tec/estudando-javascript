@@ -5,17 +5,22 @@ function contar() {
     let passo = Number(document.querySelector('#passo').value)
     let resultado = document.querySelector('#resultado')
 
-    // Testando...
-    // resultado.innerHTML = `${inicio} - ${fim} - ${passo}`
-    
     resultado.innerHTML = ''
 
+    // Validando campos vazios
     if (inicio == 0 || fim == 0 || passo == 0) {
         resultado.innerHTML = '<strong>Erro:</strong> Por pavor preencha todos os campos'
     } else {
-        
-        for (inicio; inicio <= fim; inicio+=passo) {
-            resultado.innerHTML += `${inicio} 😀 `
+        if (inicio < fim) {
+            // Contagem crscente
+            for (inicio; inicio <= fim; inicio+=passo) {
+                resultado.innerHTML += `${inicio} 😀 `
+            }
+        } else {
+            // Contagem regressiva
+            for (inicio; inicio >= fim; inicio-=passo) {
+                resultado.innerHTML += `${inicio} 😀 `
+            }
         }
         resultado.innerHTML += '👍'
     }
