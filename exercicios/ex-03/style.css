@@ -22,7 +22,7 @@ header {
 }
 
 section {
-    min-width: 300px;
+    max-width: 300px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -34,12 +34,24 @@ section {
 
 label {
     display: inline-block;
-    width: 60px;
+    width: 55px;
 }
 
 input {
     margin: 5px 0;
-    padding: 5px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: royalblue;
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
 }
 
 #resultado {
