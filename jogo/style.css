@@ -48,10 +48,11 @@ input {
     width: 200px;
     color: royalblue;
     font-weight: bold;
+    border: 2px solid royalblue;
 }
 
 /* label underline focus color */
-input[type=number]:focus {
+input:focus {
     border: 2px solid royalblue;
   }
 
