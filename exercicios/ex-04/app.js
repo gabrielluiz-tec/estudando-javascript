@@ -25,6 +25,8 @@ function validarNumero(num) {
 }
 
 function analisarNumero(listaNum) {
+    analise.innerHTML = ''
+    resultado.innerHTML = ''
     erros.innerHTML = ''
     if (listaNumeros.length == 0) {
         erros.innerHTML = `Nenhum número cadastrado`
@@ -44,5 +46,6 @@ function analisarNumero(listaNum) {
         //  Retorna a média dos valores da lista
         let media = soma / listaNumeros.length
         analise.innerHTML += `A média dos valores é: <strong>${media.toFixed(2)}</strong><br>`
+        listaNumeros = []
     }
 }
