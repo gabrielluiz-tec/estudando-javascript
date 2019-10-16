@@ -6,6 +6,7 @@ let listaNumeros = []
 function adicionarNumero() {
     let numero = Number(document.querySelector('#numero').value)
     if (!validarNumero(numero)) {
+        analise.innerHTML = ''
         erros.innerHTML = ''
         listaNumeros.push(numero)
         resultado.innerHTML += `<span>${numero}</<span>`
