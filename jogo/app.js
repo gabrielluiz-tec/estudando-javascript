@@ -41,7 +41,7 @@ function advinhaNumero() {
                 ultimoResultado.innerHTML += `<span>${tentativa}</span>`
                 listaNumeros.push(tentativa)
 
-                if (contador == 1) {
+                if (contador == 10) {
                     botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
                     tentativas.innerHTML = ''
                     ultimoResultado.innerHTML = ''
