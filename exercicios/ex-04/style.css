@@ -13,6 +13,10 @@ body {
     align-items: center;
 }
 
+:focus {
+    outline: none;
+}
+
 header {
     padding-bottom: 30px;
 }
