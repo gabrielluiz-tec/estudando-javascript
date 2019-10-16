@@ -15,7 +15,7 @@ let botao = document.querySelector('#botaoTentar')
 function advinhaNumero() {
     let tentativa = Number(document.querySelector('#tentativa').value)
 
-    if (tentativa == 0 || tentativa < 1 || tentativa > 100) {
+    if (tentativa < 1 || tentativa > 100) {
         baixoAlto.innerHTML = 'Por favor,<br>digite um número entre <strong>1</strong> e <strong>100</strong>.'
     } else {
         if (tentativa == numeroAleatorio) {

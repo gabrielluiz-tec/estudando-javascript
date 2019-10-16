@@ -1,0 +1,95 @@
+body {
+    /* padding: 10px; */
+    min-height: 100vh;
+    background-color: royalblue;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header {
+    padding-bottom: 30px;
+}
+
+section {
+    max-width: 350px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: #666;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+
+}
+
+#resultado span {
+    display: inline-block;
+    margin: 2px;
+    width: 30px;
+    height: 30px;
+    background: royalblue;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    color: #FFF;
+}
+
+input {
+    margin: 20px 10px 10px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 2rem;
+    text-align: center;
+    width: 200px;
+    color: royalblue;
+    font-weight: bold;
+    border: 2px solid royalblue;
+}
+
+/* label underline focus color */
+input:focus {
+    border: 2px solid royalblue;
+  }
+
+button {
+    display: inline-block;
+    width: 210px;
+    margin: 5px 0;
+    padding: 10px 10px ;
+    background-color: royalblue;
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+button.analisar {
+    background-color: rgb(13, 129, 71);
+}
+
+button.analisar:hover {
+    background-color: rgb(9, 100, 55);
+}
+
+button:hover {
+    background-color: rgb(45, 83, 196);
+}
+
+#erros {
+    color: royalblue;
+    text-align: center;
+}
+
+footer {
+    padding-bottom: 30px;
+    font-size: 1rem;
+}
