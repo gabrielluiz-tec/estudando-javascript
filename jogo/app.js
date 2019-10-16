@@ -22,7 +22,7 @@ function advinhaNumero() {
             contador++
             tentativas.innerHTML = ''
             ultimoResultado.innerHTML = ''
-            botao.innerHTML = '<a href="/">Jogar novamente</a>'
+            botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
             baixoAlto.innerHTML = `<strong>Parabéns!</strong><br>Você acertou em <strong>${contador}</strong> tentativas.`
             contador = 0
             listaNumeros = []
@@ -42,10 +42,10 @@ function advinhaNumero() {
                 listaNumeros.push(tentativa)
 
                 if (contador == 10) {
-                    botao.innerHTML = '<a href="/">Jogar novamente</a>'
+                    botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
                     tentativas.innerHTML = ''
                     ultimoResultado.innerHTML = ''
-                    botao.innerHTML = '<a href="/">Jogar novamente</a>'
+                    botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
                     baixoAlto.innerHTML = `<strong>Que pena!</strong><br>Tente novamente.`
                 }
             }
