@@ -38,7 +38,7 @@ function advinhaNumero() {
                 }
                 contador++
                 tentativas.innerHTML = `Tentativas: ${contador} <br>`
-                ultimoResultado.innerHTML += `[<strong>${tentativa}</strong>] `
+                ultimoResultado.innerHTML += `<span>${tentativa}</span>`
                 listaNumeros.push(tentativa)
 
                 if (contador == 10) {
@@ -55,3 +55,10 @@ function advinhaNumero() {
         // console.log(`Número Aleatório: ${numeroAleatorio}`)
     }
 } // Fim da função
+
+
+document.addEventListener('keypress', function(e){
+    if(e.which == 13){
+        advinhaNumero()
+    }
+  }, false);

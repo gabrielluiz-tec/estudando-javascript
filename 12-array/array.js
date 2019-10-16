@@ -33,3 +33,11 @@ for (let pos in lista) {
 
 // Verificar se valor existe no array
 console.log(lista.includes('casa'))
+
+// Verificar se valor existe no array
+// Retorna a posição do valor no array
+console.log(lista.indexOf('casa'))
+
+// Verificar se valor existe no array
+// Retorna "-1" se não encontrar o valor no array
+console.log(lista.indexOf('café'))

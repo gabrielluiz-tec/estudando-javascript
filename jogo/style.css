@@ -3,7 +3,7 @@ body {
     min-height: 100vh;
     background-color: royalblue;
     font-family: sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: white;
     text-align: center;
 
@@ -24,7 +24,6 @@ section {
     border-radius: 10px;
     color: #666;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    text-align: left;
 
 }
 
@@ -34,9 +33,13 @@ section {
 }
 
 
+.label-palpite {
+    display: inline-block;
+    color: royalblue;
+}
 
 input {
-    margin: 10px;
+    margin: 20px 10px 10px;
     padding: 10px 5px;
     border-radius: 5px;
     border: 1px solid #999;
@@ -62,6 +65,23 @@ button {
 
 button:hover {
     background-color: rgb(45, 83, 196);
+}
+
+#tentativas {
+    font-weight: bold;
+}
+
+#ultimoResultado span {
+    display: inline-block;
+    margin: 2px;
+    width: 30px;
+    height: 30px;
+    background: royalblue;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    color: #FFF;
 }
 
 #baixoAlto {
