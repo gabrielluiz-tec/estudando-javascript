@@ -52,8 +52,8 @@ input {
 }
 
 /* label underline focus color */
-input:focus {
-    border: 2px solid royalblue;
+:focus {
+    outline: none;
   }
 
 button {
