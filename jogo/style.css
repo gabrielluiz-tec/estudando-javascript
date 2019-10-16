@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    padding: 30px;
+    padding-bottom: 30px;
 }
 
 section {
@@ -100,6 +100,6 @@ a {
 }
 
 footer {
-    padding: 30px;
+    padding-bottom: 30px;
     font-size: 1rem;
 }
