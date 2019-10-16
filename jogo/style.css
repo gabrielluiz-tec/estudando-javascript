@@ -50,6 +50,11 @@ input {
     font-weight: bold;
 }
 
+/* label underline focus color */
+input[type=number]:focus {
+    border: 2px solid royalblue;
+  }
+
 button {
     display: inline-block;
     width: 210px;
