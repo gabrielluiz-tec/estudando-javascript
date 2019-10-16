@@ -43,6 +43,6 @@ function analisarNumero(listaNum) {
         analise.innerHTML += `A soma dos valores é: <strong>${soma}</strong><br>`
         //  Retorna a média dos valores da lista
         let media = soma / listaNumeros.length
-        analise.innerHTML += `A édia dos valores é: <strong>${media.toFixed(2)}</strong><br>`
+        analise.innerHTML += `A média dos valores é: <strong>${media.toFixed(2)}</strong><br>`
     }
 }
