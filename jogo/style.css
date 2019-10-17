@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     /* padding: 10px; */
     min-height: 100vh;
@@ -6,12 +13,15 @@ body {
     font-size: 1rem;
     color: white;
     text-align: center;
-
+    
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+header {
+    padding: 20px;
+}
 
 section {
     max-width: 350px;
@@ -20,7 +30,11 @@ section {
     border-radius: 10px;
     color: #666;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    
+}
 
+p {
+    margin-bottom: 10px;
 }
 
 #form {
@@ -55,6 +69,7 @@ input {
 button {
     display: inline-block;
     width: 210px;
+    margin: 10px 0;
     padding: 20px 10px ;
     background-color: tomato;
     color: #FFF;
@@ -102,7 +117,7 @@ a {
 }
 
 footer {
-    padding-bottom: 30px;
+    padding: 30px;
     font-size: 1rem;
 }
 
