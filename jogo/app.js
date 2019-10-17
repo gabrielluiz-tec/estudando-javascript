@@ -46,21 +46,17 @@ function altoOuBaixo(num) {
 
 function acertou(num) {
     if (num == numeroAleatorio) {
-        tentativas.innerHTML = ''
-        ultimoResultado.innerHTML = ''
-        botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
-        baixoAlto.innerHTML = `<strong>Parabéns!</strong><br>Você acertou em <strong>${contador}</strong> tentativas.`
+        baixoAlto.innerHTML = `<strong>Parabéns!</strong> Você acertou.`
         contador = 0
         listaNumeros = []
-        erro.innerHTML = ''
+        botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
+        ultimoResultado.lastChild.style.background = 'tomato'
+        botao.onclick = ''
     } else if (contador == 10) {
-        botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
-        tentativas.innerHTML = ''
-        ultimoResultado.innerHTML = ''
-        botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
         baixoAlto.innerHTML = `<strong>Que pena!</strong><br>Tente novamente.`
+        botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
+        botao.onclick = ''
     }
-    // limparInput()
 }
 
 document.addEventListener('keypress', function(e){
