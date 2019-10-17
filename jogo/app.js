@@ -57,7 +57,7 @@ function acertou(num) {
         botao.onclick = ''
     } 
     else if (contador == 10) {
-        erro.innerHTML = `<strong>Que pena!</strong><br>Tente novamente.`
+        erro.innerHTML = `<strong>Não foi desta vez!</strong><br>Tente novamente.`
         botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
         tentativa.style.display = 'none'
         baixoAlto.innerHTML = ''
