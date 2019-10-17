@@ -89,11 +89,21 @@ button:hover {
 }
 
 #erros {
-    color: royalblue;
+    color: tomato;
     text-align: center;
 }
 
 footer {
     padding-bottom: 30px;
     font-size: 1rem;
+}
+
+a {
+    color: #FFF;
+    font-weight: bold;
+    transition-duration: .3s;
+}
+
+a:hover {
+    color: tomato;
 }
