@@ -56,7 +56,7 @@ function advinhaNumero() {
     }
 } // Fim da função
 
-
+// Verifica se tecla enter foi pressionada
 document.addEventListener('keypress', function(e){
     if(e.which == 13){
         advinhaNumero()
