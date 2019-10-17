@@ -56,7 +56,7 @@ function acertou(num) {
         ultimoResultado.lastChild.style.background = 'tomato'
         botao.onclick = ''
     } 
-    else if (contador == 5) {
+    else if (contador == 10) {
         erro.innerHTML = `<strong>Que pena!</strong><br>Tente novamente.`
         botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
         tentativa.style.display = 'none'
@@ -66,7 +66,7 @@ function acertou(num) {
 }
 
 document.addEventListener('keypress', function(e){
-    if (e.which == 13 && (listaNumeros.includes(numeroAleatorio) || contador == 5) ) {
+    if (e.which == 13 && (listaNumeros.includes(numeroAleatorio) || contador == 10) ) {
         window.location.href = "index.html";
     }
     else if (e.which == 13) {
