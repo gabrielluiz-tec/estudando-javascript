@@ -6,6 +6,7 @@ let listaNumeros = []
 function adicionarNumero() {
     if (!validarNumero(Number(numero.value))) {
         erros.innerHTML = ''
+        listaNumeros.length == 0 ? resultado.innerHTML = '': ''
         listaNumeros.push(Number(numero.value))
         resultado.innerHTML += `<span>${numero.value}</<span>`
     } limparInput()
@@ -15,7 +16,7 @@ function validarNumero(num) {
     if (num < 1 || num > 100 ) {
         erros.innerHTML = `Número inválido`
         limparInput()
-        resultado.innerHTML = ''
+        listaNumeros.length == 0 ? resultado.innerHTML = '' : ''
         return true
     }
     else if (listaNumeros.includes(num)) {
@@ -26,9 +27,9 @@ function validarNumero(num) {
 }
 
 function analisarNumero() {
-    resultado.innerHTML = ''
     erros.innerHTML = ''
     if (listaNumeros.length == 0) {
+        resultado.innerHTML = ''
         erros.innerHTML = `Nenhum número cadastrado`
     } else {
         let maior = Math.max(...listaNumeros)
