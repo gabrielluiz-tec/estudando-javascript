@@ -8,6 +8,7 @@ let listaNumeros = []
 let contador = 0
 
 console.log(numeroAleatorio)
+console.log(listaNumeros)
 
 function advinharNumero() {
     if (!validarTentativa(Number(tentativa.value))) {
@@ -22,6 +23,7 @@ function advinharNumero() {
     }
     acertou(Number(tentativa.value))
     limparInput()
+    console.log("Clicou:" , listaNumeros)
 }
 
 function validarTentativa(num) {
@@ -48,19 +50,28 @@ function acertou(num) {
     if (num == numeroAleatorio) {
         baixoAlto.innerHTML = `<strong>Parabéns!</strong> Você acertou.`
         contador = 0
-        listaNumeros = []
+        // listaNumeros = []
         botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
+        tentativa.style.display = 'none'
         ultimoResultado.lastChild.style.background = 'tomato'
         botao.onclick = ''
-    } else if (contador == 10) {
-        baixoAlto.innerHTML = `<strong>Que pena!</strong><br>Tente novamente.`
+    } 
+    else if (contador == 5) {
+        erro.innerHTML = `<strong>Que pena!</strong><br>Tente novamente.`
         botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
+        tentativa.style.display = 'none'
+        baixoAlto.innerHTML = ''
         botao.onclick = ''
     }
 }
 
 document.addEventListener('keypress', function(e){
-    if(e.which == 13){ advinharNumero() }
+    if (e.which == 13 && (listaNumeros.includes(numeroAleatorio) || contador == 5) ) {
+        window.location.href = "index.html";
+    }
+    else if (e.which == 13) {
+        advinharNumero()
+    }
   }, false);
 
 function limparInput() {
