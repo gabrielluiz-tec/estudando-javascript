@@ -1,6 +1,7 @@
 let tentativa = document.querySelector('#tentativa')
 let tentativas = document.querySelector('#tentativas')
 let ultimoResultado = document.querySelector('#ultimoResultado')
+let erro = document.querySelector('#erro')
 let botao = document.querySelector('#botaoTentar')
 let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
 let listaNumeros = []
@@ -15,19 +16,22 @@ function advinharNumero() {
         ultimoResultado.innerHTML += `<span>${tentativa.value}</span>`
         tentativas.innerHTML = `Tentativas: ${contador} <br>`
         baixoAlto.innerHTML = ''
-        console.log(listaNumeros)
+        erro.innerHTML = ''
         altoOuBaixo(Number(tentativa.value))
+        console.log(listaNumeros)
     }
     acertou(Number(tentativa.value))
     limparInput()
 }
 
 function validarTentativa(num) {
+    erro.innerHTML = ''
+    baixoAlto.innerHTML = ''
     if (num < 1 || num > 100 ) {
-        baixoAlto.innerHTML = 'Numero inválido.'
+        erro.innerHTML = 'Numero <strong>inválido</strong>.'
         return true
     } else if (listaNumeros.includes(num)) {
-        baixoAlto.innerHTML = 'Este número <strong>já foi digitado</strong>.'
+        erro.innerHTML = 'Este número <strong>já foi digitado</strong>.'
         return true
     }
 }
@@ -48,7 +52,7 @@ function acertou(num) {
         baixoAlto.innerHTML = `<strong>Parabéns!</strong><br>Você acertou em <strong>${contador}</strong> tentativas.`
         contador = 0
         listaNumeros = []
-        return true
+        erro.innerHTML = ''
     } else if (contador == 10) {
         botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
         tentativas.innerHTML = ''
@@ -56,6 +60,7 @@ function acertou(num) {
         botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
         baixoAlto.innerHTML = `<strong>Que pena!</strong><br>Tente novamente.`
     }
+    // limparInput()
 }
 
 document.addEventListener('keypress', function(e){

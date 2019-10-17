@@ -71,6 +71,7 @@ button {
 
 button:hover {
     background-color: rgb(45, 83, 196);
+    color: #FFF;
 }
 
 #tentativas {
@@ -91,8 +92,12 @@ button:hover {
 }
 
 #baixoAlto {
-    color: tomato;
+    color: royalblue;
     text-align: center;
+}
+
+#erro {
+    color: tomato;
 }
 
 a {
@@ -105,12 +110,12 @@ footer {
     font-size: 1rem;
 }
 
-a:link, a:visited  {
+footer a:link, footer a:visited  {
     color: #FFF;
     font-weight: bold;
     transition-duration: .3s;
 }
 
-a:active, a:hover {
+footer a:active, footer a:hover {
     color: rgb(253, 161, 145);
 }
