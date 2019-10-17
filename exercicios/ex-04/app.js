@@ -5,13 +5,14 @@ let erros = document.querySelector('#erros')
 let listaNumeros = []
 
 function adicionarNumero() {
-    if (!validarNumero(numero.value)) {
+    if (!validarNumero(Number(numero.value))) {
         analise.innerHTML = ''
         erros.innerHTML = ''
         listaNumeros.push(Number(numero.value))
         resultado.innerHTML += `<span>${numero.value}</<span>`
         numero.value = ''
         numero.focus()
+        console.log(listaNumeros)
     }
 }
 
@@ -20,6 +21,7 @@ function validarNumero(num) {
         erros.innerHTML = `Número inválido`
         numero.value = ''
         numero.focus()
+        analise.innerHTML = ''
         return true
     }
     else if (listaNumeros.includes(num)) {
@@ -49,6 +51,9 @@ function analisarNumero(listaNum) {
         let media = soma / listaNumeros.length
         analise.innerHTML += `A média dos valores é: <strong>${media.toFixed(2)}</strong><br>`
         listaNumeros = []
+        numero.value = ''
+        numero.focus()
+        console.log(listaNumeros)
     }
 }
 
