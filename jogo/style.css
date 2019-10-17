@@ -9,12 +9,12 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 header {
-    /* padding-bottom: 30px; */
+    padding-bottom: 30px;
 }
 
 section {
@@ -91,7 +91,7 @@ button:hover {
 }
 
 #baixoAlto {
-    color: royalblue;
+    color: tomato;
     text-align: center;
 }
 
@@ -103,4 +103,14 @@ a {
 footer {
     padding-bottom: 30px;
     font-size: 1rem;
+}
+
+a:link, a:visited  {
+    color: #FFF;
+    font-weight: bold;
+    transition-duration: .3s;
+}
+
+a:active, a:hover {
+    color: rgb(253, 161, 145);
 }

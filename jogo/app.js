@@ -25,21 +25,18 @@ function advinharNumero() {
 function validarTentativa(num) {
     if (num < 1 || num > 100 ) {
         baixoAlto.innerHTML = 'Numero inválido.'
-        console.log('Número inválido')
         return true
     } else if (listaNumeros.includes(num)) {
-        baixoAlto.innerHTML = 'Este número já foi digitado.'
-        console.log('Este número já foi digitado')
-        console.log(num)
+        baixoAlto.innerHTML = 'Este número <strong>já foi digitado</strong>.'
         return true
     }
 }
 
 function altoOuBaixo(num) {
     if (num < numeroAleatorio && num > 0 || !listaNumeros.includes(num)) {
-        baixoAlto.innerHTML = 'BAIXO. Digite um número maior.'
+        baixoAlto.innerHTML = 'Digite um número <strong>maior</strong>.'
     } else if (num > numeroAleatorio && num <= 100 || !listaNumeros.includes(num)) {
-        baixoAlto.innerHTML = 'ALTO. Digite um número menor.'
+        baixoAlto.innerHTML = 'Digite um número <strong>menor</strong>.'
     }
 }
 
