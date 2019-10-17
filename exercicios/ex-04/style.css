@@ -1,5 +1,5 @@
 body {
-    /* padding: 10px; */
+    padding: 20px;
     min-height: 100vh;
     background-color: royalblue;
     font-family: sans-serif;
@@ -22,7 +22,7 @@ header {
 }
 
 section {
-    max-width: 350px;
+    max-width: 300px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
