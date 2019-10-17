@@ -49,4 +49,7 @@ document.addEventListener('keypress', function(e){
     if(e.which == 13){ adicionarNumero() }
   }, false);
 
-  function limparInput() { numero.value = ''; numero.focus() }
+function limparInput() {
+    numero.value = ''; 
+    numero.focus()
+}

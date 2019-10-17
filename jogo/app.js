@@ -1,64 +1,75 @@
-
-let contador = 0
-
+let tentativa = document.querySelector('#tentativa')
 let tentativas = document.querySelector('#tentativas')
 let ultimoResultado = document.querySelector('#ultimoResultado')
-let listaNumeros = []
-// Gera um número aleatório entre "1 e 100"
 let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-// Mostra no console o número gerado pelo sistema
-console.log(`Número Aleatório: ${numeroAleatorio}`)
+let listaNumeros = []
+let contador = 0
 
 let botao = document.querySelector('#botaoTentar')
 
+console.log(numeroAleatorio)
 
-function advinhaNumero() {
-    let tentativa = Number(document.querySelector('#tentativa').value)
-
-    if (tentativa < 1 || tentativa > 100) {
-        baixoAlto.innerHTML = 'Por favor,<br>digite um número entre <strong>1</strong> e <strong>100</strong>.'
-    } else {
-        if (tentativa == numeroAleatorio) {
-            contador++
-            tentativas.innerHTML = ''
-            ultimoResultado.innerHTML = ''
-            botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
-            baixoAlto.innerHTML = `<strong>Parabéns!</strong><br>Você acertou em <strong>${contador}</strong> tentativas.`
-            contador = 0
-            listaNumeros = []
-        } else {
-            if (listaNumeros.includes(tentativa)) {
-                baixoAlto.innerHTML = 'Este número já foi digitado.'
-                console.log(`${tentativa} está no array`)
-            } else {
-                if (tentativa < numeroAleatorio) {
-                    baixoAlto.innerHTML = 'BAIXO. Digite um número maior.'
-                } else {
-                    baixoAlto.innerHTML = 'ALTO. Digite um número menor.'
-                }
-                contador++
-                tentativas.innerHTML = `Tentativas: ${contador} <br>`
-                ultimoResultado.innerHTML += `<span>${tentativa}</span>`
-                listaNumeros.push(tentativa)
-
-                if (contador == 10) {
-                    botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
-                    tentativas.innerHTML = ''
-                    ultimoResultado.innerHTML = ''
-                    botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
-                    baixoAlto.innerHTML = `<strong>Que pena!</strong><br>Tente novamente.`
-                }
-            }
-        }
+function advinharNumero() {
+    if (!validarTentativa(Number(tentativa.value))) {
+        contador++
+        listaNumeros.push(Number(tentativa.value))
+        ultimoResultado.innerHTML += `<span>${tentativa.value}</span>`
+        tentativas.innerHTML = `Tentativas: ${contador} <br>`
+        baixoAlto.innerHTML = ''
         console.log(listaNumeros)
-        console.log(`Contador: ${contador}`)
-        // console.log(`Número Aleatório: ${numeroAleatorio}`)
     }
-} // Fim da função
+    acertou(Number(tentativa.value))
+    altoOuBaixo(Number(tentativa.value))
+    limparInput()
+}
 
-// Verifica se tecla enter foi pressionada
-document.addEventListener('keypress', function(e){
-    if(e.which == 13){
-        advinhaNumero()
+function validarTentativa(num) {
+    if (num < 1 || num > 100 ) {
+        baixoAlto.innerHTML = 'Numero inválido.'
+        return true
     }
+    if (listaNumeros.includes(num)) {
+        baixoAlto.innerHTML = 'Este número já foi digitado.'
+        return true
+    }
+}
+
+function acertou(num) {
+    if (num == numeroAleatorio) {
+        contador++
+        tentativas.innerHTML = ''
+        ultimoResultado.innerHTML = ''
+        botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
+        baixoAlto.innerHTML = `<strong>Parabéns!</strong><br>Você acertou em <strong>${contador}</strong> tentativas.`
+        contador = 0
+        listaNumeros = []
+        return true
+    }
+
+    else if (contador == 10) {
+        botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
+        tentativas.innerHTML = ''
+        ultimoResultado.innerHTML = ''
+        botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
+        baixoAlto.innerHTML = `<strong>Que pena!</strong><br>Tente novamente.`
+    }
+}
+
+function altoOuBaixo(num) {
+    if (num < numeroAleatorio && num > 0) {
+        baixoAlto.innerHTML = 'BAIXO. Digite um número maior.'
+    } else if (num > numeroAleatorio && num <= 100) {
+        baixoAlto.innerHTML = 'ALTO. Digite um número menor.'
+    }
+}
+
+
+
+document.addEventListener('keypress', function(e){
+    if(e.which == 13){ advinharNumero() }
   }, false);
+
+function limparInput() {
+    tentativa.value = ''; 
+    tentativa.focus()
+}
