@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript - While</title>
+
+</head>
+<body>
+    
+    <h1>JavaScript - While</h1>
+
+
+    <script>
+
+        let contador = 1
+        console.log('While 01')
+
+        while (contador <= 10) {
+            console.log(contador)
+            contador++
+        }
+
+        // Utilizando o 'break' para parar o laço
+        contador = 1
+        console.log('While 02')
+
+        while (contador <= 10) {
+            if (contador == 4) {
+                break
+            }
+            console.log(contador)
+            contador++
+        }
+
+        // Exercídio utilizando 'While' e 'break'
+        // Imprimir número de 0 a 100
+        // Multiplos de 3 = PING
+        // Multiplos de 5 = PONG
+        // Multiplos de 3 e 5 = PING PONG
+        console.log('Exercício PING PING')
+        contador = 0
+        while (contador <= 100) {
+            if (contador % 3 == 0 && contador % 5 == 0) {
+                console.log(contador, 'PING PONG')
+            }
+            else if (contador % 3 == 0) {
+                console.log(contador, 'PING')
+            }
+            else if (contador % 5 == 0) {
+                console.log(contador, 'PONG')
+            } else {
+                console.log(contador)
+            } contador++
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript - Iterando Objetos</title>
+</head>
+<body>
+    <h1>JavaScript - Iterando Objetos</h1>
+
+    <script>
+
+        let aluno = {
+            nome: 'João',
+            idade: 20,
+            sexo: 'M'
+        }
+        
+        // Retorna um array com as chaves do objeto
+        console.log(Object.keys(aluno))
+        // Retorna um array com os valores do objeto
+        console.log(Object.values(aluno)) 
+
+
+        /****************************
+         * Iterando um objeto */
+
+        // Exemplo 01 - usando 'for'
+        let chaves = Object.keys(aluno)
+        console.log(chaves)
+
+        // Iterando sobre um array com as propriedades
+        for (let i = 0; i < chaves.length; i++) {
+            console.log('Usando "for": ', chaves[i]) // Pegando a propriedade
+            console.log('Usando "for": ', aluno[chaves[i]]) // Pegando o valor pela chave
+        }
+
+        // Exemplo 02 - usando 'for of'
+
+        // Iterando sobre um array com as propriedades
+        for ( let chave of chaves) {
+            console.log('Usando "for of": ', aluno[chave])
+        }
+
+        // Exemplo 03 - Usando 'for in' - for ideal para iterar objetos
+        for (let item in aluno) {
+            console.log('Usando "for in"', item)
+            console.log('Usando "for in"', aluno[item])
+        }
+
+
+    </script>
+    
+</body>
+</html>

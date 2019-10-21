@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Eventos</title>
+</head>
+
+<body>
+    <h1 id="title">Curso JavaScript</h1>
+    <h2>Operadores Lógicos</h2>
+
+   
+
+
+
+    <script>
+
+        let a = true
+        let b = false
+        console.log('a', a)
+        console.log('b', b)
+
+        console.log('!a', !a)
+        console.log('!b', !b)
+
+        console.log('!!a', !!a)
+        console.log('!!b', !!b)
+
+        console.log('3 < 5', 3 < 5)
+        console.log('3 > 5', 3 > 5)
+        console.log('5 >= 5', 5 >= 5)
+        console.log('5 != 5', 5 != 5)
+        console.log('5 == 5', 5 == 5)
+        console.log('5 === 5', 5 === 5)
+        console.log('"5" === 5', "5" === 5)
+
+        // *******
+        // ATENÇÃO
+        // *******
+        // Alguns valores considerados falsos para o JavaScript
+        console.log('null', null)
+        console.log('!null', !null)
+        console.log('!!null', !!null)
+
+        console.log('undefined', undefined)
+        console.log('!undefined', !undefined)
+        console.log('!!undefined', !!undefined)
+
+        console.log('""', '""')
+        console.log('!""', !'')
+        console.log('!!""', !!'')
+
+        console.log('0', 0)
+        console.log('!0', !0)
+        console.log('!!0', !!0)
+
+        console.log('NaN', NaN)
+        console.log('!NaN', !NaN)
+        console.log('!!NaN', !!NaN)
+
+
+        console.log('Texto', 'Texto')
+        console.log('!Texto', !'Texto')
+        console.log('!!Texto', !!'Texto')
+
+
+        // *******
+        // ATENÇÃO
+        // *******
+        // Se todas as expressões forem verdadeiro retorna a última
+        let nome = 'Marcelo'
+        console.log(10 && 'Texto' && nome)
+
+        // Retorna o primeiro valor que resultou em "false"
+        console.log(null && nome)
+        console.log(!null && nome)
+
+        // Retorna o primeiro valor que resultou em "false"
+        console.log('Texto' && 0 && nome)
+        console.log('Texto' && null)
+        console.log('Texto' && 0)
+        console.log('Texto' && 100 && '' && nome) // Retorna string vazia
+
+        // Esta expressão retorna um valor booleano
+        console.log(10 > 5 && 7 < 10) // retorna 'true'
+
+    </script>
+
+</body>
+</html>

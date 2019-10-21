@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript - This</title>
+</head>
+<body>
+
+    <h1>JavaScript - This</h1>
+
+
+    <script>
+        // Estudando sobre o 'this'
+
+        // console.log(this) // this vale 'window'
+
+        function Usuario() {
+            this.nome = 'Marcelo'
+            this.cidade = 'PoA'
+            this.estado = 'RS'
+            this.soma = function(a, b) {return  a + b }
+        }
+
+        // Alterando o valor de 'this' usando operador 'new'
+        let usuario = new Usuario()
+        console.log(usuario)
+        console.log(usuario.nome)
+        console.log(usuario.soma(2, 7))
+
+
+        /*************************
+         * Método 'call'   */
+        function Aluno(p1, p2, p3){
+            console.log('Aluno this: ', this)
+            console.log(p1, p2, p3)
+        }
+        
+        let alunoThis = {
+            nome: 'João'
+        }
+
+        Aluno.call(alunoThis, 'Parâmetro 1', 'Parâmetro 2', 'Parâmetro 3')
+
+
+        /*****************************
+         * 
+         
+
+
+
+    </script>
+    
+</body>
+</html>

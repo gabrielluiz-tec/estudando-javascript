@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos no JavaScript</title>
+</head>
+<body>
+    <h1>Estudando JavaScript</h1>
+    <h2>Objetos</h2>
+
+
+    <script>
+
+        // Criando um objeto
+        let usuario = {
+            nome: 'Marcelo Pereira',
+            cidade: 'Porto Alegre',
+            estado: 'RS'
+        }
+
+        // Utilizando nvo recurso do ES6 - 2015
+        // Destructuring
+        // Extraindo propriedades do objeto usuário
+        let { nome, cidade, estado } = usuario
+        console.log(nome, cidade, estado)
+
+        // Extraindo o valor da propriedade 'nome'para uma NOVA variável
+        let { nome: nomeDoUsuario} = usuario
+        console.log(nomeDoUsuario)
+
+
+        // Criando um novo objeto
+        let aluno = {
+            dados: {
+                nome: 'Marcelo',
+                sobrenome: 'Pereira',
+                city: 'Rio de Janeiro' // Ver exemplo 2 abaixo
+            }
+        }
+        // Forma 01
+        let primeiroNome = aluno.dados.nome
+        console.log(primeiroNome)
+        // Forma 02
+        let { dados: { nome: firstName, sobrenome: lastName }} = aluno
+        console.log(`Aluno: ${firstName} ${lastName}`)
+
+
+        /****************************
+         * Definindo um valor default para uma propriedade
+         * Este valor será exibido caso um valor não seja definido ou informado */
+        // Exemplo 2:
+        let { dados: {city = 'Porto Alegre'} } = aluno
+        console.log(city)
+
+
+        /********************************
+         * Função para impriir objeto */
+
+        let novoAluno = {
+            nome: 'João',
+            idade: 20,
+            sexo: 'M'
+        }
+        // Aplicando o 'Destructuring' na função
+        function imprimeAluno({nome, idade, sexo, cidade = 'Porto Alegre'}) {
+            console.log(nome)
+            console.log(idade)
+            console.log(sexo)
+            console.log(cidade) // Pegando valor 'Padrão'
+        }
+        imprimeAluno(novoAluno)
+
+
+        /*********************************
+         * Iterando objetos */
+
+         // Retorna um array com as chaves do objeto
+         console.log(Object.keys(novoAluno))
+         // Retorna um array com os valores do objeto
+         console.log(Object.values(novoAluno))
+
+         
+
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Eventos</title>
+</head>
+
+<body>
+    <h1 id="title">Curso JavaScript</h1>
+    <h2>Operadores Lógicos</h2>
+
+   
+
+
+
+    <script>
+
+        // *******
+        // ATENÇÃO
+        // *******
+        // Se uma expressão for verdadeira retora 'true'
+
+        // Retorna o primeiro valor 'true'
+        console.log(null || 'texto')
+        console.log(null || 'Marcelo' || 100)
+        console.log(null || '' || 10)
+        console.log('Marcelo' || 'texto')
+        console.log(10 > 5 || 5 > 9)
+        console.log(10 < 5 || 5 > 9) // retorna false
+
+        // Como tods são 'false', retorna o últo falso '0'
+        console.log(null || false || 0)
+        
+        
+        // ******************
+        // Combinando "&&" e "||"
+        // ******************
+        
+        // Aqui o primeiro "&&" já resulta em 'true'
+        // Sendo assim retorna o último valor verdadeiro "200"
+        // E assim desconsidera do "||" em diante
+        console.log('texto' && 200 || '' && 50)
+        console.log('texto' && 200 && 'Marcelo' || 50)
+        console.log('texto' && 200 && 'Marcelo' && false)
+        console.log('texto' && 200 && 'Marcelo' || false && true)
+        console.log(null || !'' && 'Marcelo Pereira')
+
+
+
+    </script>
+
+</body>
+</html>

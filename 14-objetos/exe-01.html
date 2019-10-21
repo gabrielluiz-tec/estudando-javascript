@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos no JavaScript</title>
+</head>
+<body>
+    <h1>Estudando JavaScript</h1>
+    <h2>Objetos</h2>
+
+
+    <script>
+
+        // Criando um objeto
+        let usuario = {
+            nome: 'Marcelo Pereira',
+            profissao: 'Programador',
+            cidade: 'Porto Alegre',
+            'ultimo-nome': 'Silva', // Neste caso precisa utilizar 'aspas'
+            // Adicionando uma função como propriedade do objeto
+            imprimir() {
+                console.log('Imprimindo usuário:', usuario)
+            }
+        }
+
+        // Acessando propriedades
+        console.log('Tipo da variável: ', typeof(usuario)) // retorna o tipo da variável
+        usuario.imprimir()  
+        console.log(usuario.cidade) // forma mais utilizada
+        console.log(usuario['nome'])
+        //console.log(usuario.ultimo-nome) // Vai gerar um erro
+        console.log(usuario['ultimo-nome']) // Acessar a propiedade via '[]' e 'aspas'
+
+        // Adicionando novas propriedades ao objeto
+        usuario.estado = 'RS'
+        usuario.imprimir()
+        console.log('Usando ponto (.): ', usuario.estado)
+        console.log('Usando conchetes []: ', usuario['estado'])
+
+        // Deletando uma propriedade do objeto
+        delete usuario.estado
+        usuario.imprimir()
+
+        // Adicionando um 'array' como propriedade
+        usuario.hobbies = ['Tocar violão', 'Cozinhar', 'Programar', 'Estudar']
+        usuario.imprimir()
+
+        // Adicionando um 'objeto' como propriedade do objeto !!!
+        usuario.habilidades = {
+            linguagens: ['HTML5', 'CSS3', 'JavaScript', 'Python', 'Php'],
+            instrumentos: ['Violão', 'Teclado', 'Gaita de boca']
+        }
+        usuario.imprimir()
+        console.log(typeof(usuario.habilidades))
+        console.log(typeof(usuario.habilidades.linguagens))
+        console.log(typeof(usuario.habilidades.linguagens[0]))
+        console.log(usuario.habilidades.linguagens[0]) // retorna HTML5
+        console.log(usuario.habilidades['linguagens'][0]) // retorna HTML5
+        console.log(usuario.habilidades['instrumentos'][2]) // retorna Gaita de boca
+        usuario.imprimir()
+
+
+        // Definindo uma 'variável como propriedade do objeto'
+        let cor = 'Vermelho'
+        let marca = 'Nissan'
+        let ano = 2020
+        // Criando um novo objeto
+        let carro = {
+            /* Se o nome da propriedade for igual ao nome da variável
+            pode-se usar apenas a propiedade (uma característica do ES6 - 2015)*/
+            marca, // marca: marca
+            cor, // cor: cor
+            ano // ano: ano
+        }
+        console.log(carro)
+
+
+        /*******************************
+         * Fazendo 'merge' de objetos utilizando o método 'Object.assign' */
+
+        // Objeto Carro
+        let carro2 = {
+            cor: 'Vermelho',
+            ano: 2019
+        }
+        // Objeto Fábrica
+        let fabricante = {
+            marca: 'Nissan',
+            pais: 'Japão'
+        }
+
+        // Desta forma geramos um NOVO objeto '{}'
+        // ATENÇÃO: O ideal é sempre gerar um novo objeto
+        // Desta forma não alteramos os objetos originais
+        let novoCarro = Object.assign({}, carro2, fabricante)
+        console.log('Novo carro', novoCarro)
+
+        // Outra forma
+        // O objeto 'carro2' recebe os dados do objeto 'fabricante'
+        Object.assign(carro2, fabricante)
+        console.log('Carro2', carro2)
+
+
+        /**************************************************
+         * Nova maneira de fazer merge de objetos
+         * utilizando os recurso 'spread (...)' do ES6 - 2015 */
+        
+        let novoCarro3 = {
+            ...carro,
+            ...fabricante,
+            combustivel: 'Flex',
+            portas: 4
+        }
+        console.log(novoCarro3)
+        
+        
+        /***********************
+         * Sempre que quizer que o nome de ua propredade
+         * seja o valor de uma variável - usamos '[]' */
+        let nomeDaPropriedade = 'Estado'
+        let nome = 'Primeiro nome'
+        let pessoa = {
+            [nome]: 'Maria',
+            [nomeDaPropriedade]: 'Rio Grande do Sul'
+        }
+        
+        console.log('Dados da pessoa:', pessoa)
+        console.log('Nome da pessoa:', pessoa['Primeiro nome'])
+
+
+        /****************************************
+         * Estudando Getters e Setters */
+        let alunos = [
+            {
+                nome: 'Pedro',
+                idade: 26
+            },
+            {
+                nome: 'João',
+                idade: 19
+            },
+            {
+                nome: 'Maria',
+                idade: 21
+            }
+        ]
+
+        console.log('Lista Alunos:', alunos)
+        console.log('Aluno:', alunos[1])
+        console.log('Nome Aluno:', alunos[1].nome)
+
+        /**************************
+         * Criando uma variável de apoio
+         * para percorrer o objeto */
+        let aluno = {
+            posicao: 0,
+            get atual() {
+                return alunos[this.posicao]
+            },
+            set atual(pos) {
+                this.posicao = pos
+            },
+            proximo() {
+                this.posicao++
+                if (aluno.posicao == alunos.length) {
+                    this.posicao = 0
+                }
+            },
+            anterior() {
+                this.posicao--
+                if (aluno.posicao == -1) {
+                    this.posicao = alunos.length - 1
+                }
+            }
+        }
+        // 0-Pedro / 1-João / 2-Maria
+        console.log('=================================')
+        console.log('Início: ', aluno.atual) // Pedro
+        aluno.anterior()
+        console.log(aluno.atual) // Maria
+        aluno.anterior()
+        console.log(aluno.atual) // João
+        aluno.anterior()
+        console.log(aluno.atual) // Pedro
+        aluno.anterior()
+        console.log(aluno.atual) // Maria
+        aluno.anterior()
+        console.log(aluno.atual) // João
+        aluno.anterior()
+        console.log(aluno.atual) // Pedro
+        aluno.atual = 1
+        aluno.anterior()
+        console.log(aluno.atual) // Pedro
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

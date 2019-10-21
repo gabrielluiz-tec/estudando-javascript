@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+
+</head>
+<body>
+    
+    <h1>Arrays</h1>
+
+
+    <script>
+
+        let lista = [ 2, 4, 55, 16, 900]
+        console.log(lista)
+        
+        for (i in lista) {
+            console.log(i, lista[i])
+        }
+        
+        // Retorna o tamanho do array
+        console.log(`Tamanho do array: ${lista.length}`)
+        
+        // Remve o último elemento do array e retorna o mesmo
+        console.log(lista.pop())
+        console.log(lista)
+        
+        // Adiciona elemento n fim do array
+        console.log(lista.push(444))
+        console.log(lista.push(100))
+        console.log(lista)
+
+        // Retorna elementos do array em uma determinada faixa
+        console.log(lista.slice(2, 4))// retorna elementos da posição 2 e 3
+
+        // Separa os elemento pelo que for determinado no parâmetro
+        console.log(lista.join(' * '))
+
+        // Criando um novo array
+        let cliente = [
+            'Marcelo',
+            'Pereira',
+            'Porto Alegre'
+        ]
+
+        console.log(cliente)
+        cliente.push('RS')
+        cliente.push('Brasil')
+        console.log(cliente)
+        
+        // Verificando se um valor está no array
+        console.log(cliente.includes('Brasileiro')) // retorna false
+        console.log(cliente.includes('Marcelo')) // retorna true
+        console.log(cliente.indexOf('RS')) // retorna a posição do elemento no array
+        console.log(cliente.indexOf('SP')) // retorna '-1' se não encontrar o elemento no array
+        // console.log(cliente.reverse()) // retorna o array na ordem inversa
+
+        console.log(cliente.shift()) // remove o primeiro elemento na posição '0'
+        console.log('Lista atual 1: ', cliente)
+
+        console.log(cliente.pop()) // Remove o último elemento do array
+        console.log('Lista atual 2: ', cliente)
+
+        console.log(cliente.unshift(2 > 10, [2,3,4,55])) // Insere elementos no início do array
+        console.log('Lista atual 3: ', cliente)
+
+
+        /**********************
+         * CONCATENAR ARRAYS */
+
+        // Uilizando o método 'concat()'
+        let lista1 = [2, 34, 5, 444]
+        let lista2 = ['João', 'Maria', 'Pedro']
+        let listaCompleta = lista1.concat(lista2) // Pasando a lista2 por parâmetro
+        console.log(listaCompleta)
+        listaCompleta = listaCompleta.concat(lista1).concat(lista2) // basta ir concatenando
+        console.log(listaCompleta)
+
+
+        // NOVAS VERSÕES conta com o "Operador Spread"
+        let listaModerna = [...lista1, ...lista2]
+        console.log('Lista moderna: ', listaModerna)
+
+        // Criando um novo array
+        let novoCliente = [
+            'Marcelo',
+            'Pereira',
+            'Porto Alegre',
+            'RS'
+        ]
+
+        // Desestruturação de array 'Array Destructuring'
+        let [nome, sobrenome, , estado] = novoCliente
+        console.log(nome, sobrenome, estado)
+
+
+
+
+    </script>
+
+</body>
+</html>
