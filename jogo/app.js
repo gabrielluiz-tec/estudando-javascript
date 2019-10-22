@@ -7,8 +7,8 @@ let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
 let listaNumeros = []
 let contador = 0
 
-console.log(numeroAleatorio)
-console.log(listaNumeros)
+// console.log(numeroAleatorio)
+// console.log(listaNumeros)
 
 function advinharNumero() {
     if (!validarTentativa(Number(tentativa.value))) {
@@ -53,11 +53,11 @@ function acertou(num) {
         // listaNumeros = []
         botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
         tentativa.style.display = 'none'
-        ultimoResultado.lastChild.style.background = 'tomato'
+        ultimoResultado.lastChild.style.background = 'var(--cor-padrao)'
         botao.onclick = ''
     } 
     else if (contador == 10) {
-        erro.innerHTML = `<strong>Não foi desta vez!</strong><br>Tente novamente.`
+        erro.innerHTML = `<br><strong>:(<br><br>Não foi desta vez!</strong><br>Tente novamente.`
         botao.innerHTML = '<a href="index.html">Jogar novamente</a>'
         tentativa.style.display = 'none'
         baixoAlto.innerHTML = ''
