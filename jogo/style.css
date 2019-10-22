@@ -65,6 +65,7 @@ input {
     color: var(--cor-padrao);
     font-weight: bold;
     border: 2px solid var(--cor-padrao);
+    background-color: transparent;
 }
 
 /* label underline focus color */
