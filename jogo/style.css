@@ -31,7 +31,7 @@ header {
 
 section {
     max-width: 400px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, .75);
     padding: 20px;
     border-radius: 10px;
     color: #666;
