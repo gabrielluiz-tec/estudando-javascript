@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow functions</title>
+</head>
+<body>
+    <h1>Arrow functions</h1>
+
+
+    <script>
+        // Estudando Arrow functions
+
+        // Vamos criar nossa primeira unção
+        // Esta função deve apenas imprmir uma mensagem no console do navegador
+
+        function imprimirFrase() {
+            console.log('Estudar JavaScript é bem legal!')
+        }
+
+        // Agora precisamos invocar a nosa funçaõ
+        imprimirFrase()
+
+        // Aqui vamos criar uma Função passando parâmetro
+        function imprimaAlgumaCoisa(frase) {
+            console.log(frase)
+        }
+        // Vamos invocar a função passando o parâmero
+        console.log('Estudando JavaScript.')
+
+
+
+
+        /******************************************/
+        // Aqui vamos criar uma Função passando parâmetro
+        function soma(a, b) {
+            return a + b
+        }
+
+        let resultado =  soma(3, 9)
+        console.log(`Somando números: ${resultado}`)
+        
+        
+        /**************************************/
+        // Passando um array como parâmetro
+        function somaValoresDoArray(array) {
+            let resultado = 0
+            for (let i =  0; i < array.length; i++ ) {
+                resultado += array[i]
+            }
+            return resultado
+        }
+        let resultadoDaSoma = somaValoresDoArray([2, 4, 6, 8])
+        console.log(`Somando array 1: ${resultadoDaSoma}`)
+
+
+
+        /**************************************/
+        // Passando um array como parâmetro
+        function somaValoresDoArray2(numeros) {
+            let resultado = 0
+            for (let numero of numeros) {
+                resultado += numero
+            }
+            return resultado
+        }
+        let resultadoDaSoma2 = somaValoresDoArray2([2, 4, 6, 8])
+        console.log(`Somando array 2: ${resultadoDaSoma2}`)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript - Funções Anônimas</title>
+</head>
+
+<body>
+
+    <h1>Estudando JavaScript</h1>
+    <h2>Funções Anônimas</h2>
+
+
+    <script>
+        // Vamos brincar com estilos css via javaScript
+        let body = document.querySelector('body')
+        body.style.padding = '20px'
+        body.style.fontFamily = 'Sans-serif'
+        body.style.background = '#222'
+        body.style.color = '#FFF'
+    </script>
+
+
+    <script>
+        // Antes de tudo vamos relembrar que podemos atribuir uma função a uma variável
+
+        // Aqui criamos uma variável e atribuimos uma função
+        let somaNumeros = function somar(n1, n2) {
+            // Esta funçao retorna a soma de dois números
+            return n1 + n2
+        }
+        // Aqui nós invocamos a função passando dois números
+        console.log(somaNumeros(2, 6)) // Imprime '8'
+
+
+
+        /********************************************/
+        // Agora vamos estudar "Funções Anônimas"
+        // Uma função anônima é uma função "sem nome" :)
+        let multiplicaNumeros = function (n1, n2) {
+            return n1 * n2
+        }
+        console.log(multiplicaNumeros(2, 5)) // Imprime '10'
+        
+
+
+    </script>
+
+</body>
+
+</html>

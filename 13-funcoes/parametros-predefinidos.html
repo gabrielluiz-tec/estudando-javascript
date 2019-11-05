@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript - Passando Parâmetros Prédefinidos</title>
+</head>
+
+<body>
+
+    <h1>Estudando JavaScript</h1>
+    <h2>Passando Parâmetros Prédefinidos</h2>
+
+
+    <script>
+        // Vamos brincar com estilos css via javaScript
+        let body = document.querySelector('body')
+        body.style.padding = '20px'
+        body.style.fontFamily = 'Sans-serif'
+        body.style.background = '#222'
+        body.style.color = '#FFF'
+    </script>
+
+
+    <script>
+
+        function imprimeDadosDoCliente(nome = 'Marcelo', cidade = 'Porto Alegre') {
+            console.log(nome)
+            console.log(cidade)
+        }
+        imprimeDadosDoCliente()
+
+
+    </script>
+
+</body>
+
+</html>

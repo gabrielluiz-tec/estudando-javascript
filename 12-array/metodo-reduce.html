@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript - Método Reduce()</title>
+</head>
+
+<body>
+
+    <h1>Estudando JavaScript</h1>
+    <h2>Método Reduce()</h2>
+
+
+    <script>
+        // Vamos brincar com estilos css via javaScript
+        let body = document.querySelector('body')
+        body.style.padding = '20px'
+        body.style.fontFamily = 'Sans-serif'
+        body.style.background = '#222'
+        body.style.color = '#FFF'
+    </script>
+
+
+    <script>
+        // O método reduce() executa uma função reducer (provida por você) para cada membro do array, resultando num único valor de retorno.
+
+        // Sintaxe:
+        // array.reduce(callback[, valorInicial])
+
+
+        /*********************************************/
+        // Vamos criar uma função utilizando o "Método Reduce()"
+        // Esta função deve retornar a soma de todos os números do array
+
+        // Vamos relembrar o modo mais difícil"
+        const listaNumeros = [2, 3, 6, 5, 10]
+        let soma = 0
+        
+        for (let i = 0; i < listaNumeros.length; i++) {
+                soma += listaNumeros[i]
+        }
+        console.log(`Lista original: ${listaNumeros}`)
+        console.log(`Soma: ${soma}`)
+        /*********************************************/
+
+
+        /*********************************************/
+        // Agora vamos utiluzar o "Método reduce()"
+        const somaReduce = listaNumeros.reduce(function(acumulador, valorAtual) {
+            return acumulador + valorAtual
+        }, 0)
+
+        console.log(`Soma reduce(): ${somaReduce}`)
+        /*********************************************/
+
+        /*********************************************/
+        // Agora vamos utiluzar o "Método reduce()" e "Arrow Functions"
+        const somaReduceArrow = listaNumeros.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0)
+
+        console.log(`Soma reduce() e Arrow: ${somaReduceArrow}`)
+        /*********************************************/
+
+
+        /*********************************************/
+        // Exemplo de reduce com array de objetos
+        // Vamos criar uma função que retorna um novo objeto
+        // separando pessoas maiores das menores
+
+        const pessoas = [
+            {
+                nome: 'Maria',
+                idade: 20
+            },
+            {
+                nome: 'João',
+                idade: 15
+            },
+            {
+                nome: 'MarPedroia',
+                idade: 30
+            },
+            {
+                nome: 'José',
+                idade: 10
+            },
+            {
+                nome: 'Joana',
+                idade: 17
+            },
+            {
+                nome: 'Rodrigo',
+                idade: 24
+            },
+            {
+                nome: 'Fulano',
+                idade: 32
+            }
+        ]
+
+        // O valor inicial é um "objeto com duas chaves: maiores e menores"
+        const pessoasAgrupadas = pessoas.reduce(function(acumulador, valorAtual) {
+            const maiorOuMenor = valorAtual.idade >= 18 ? 'maiores' : 'menores'
+            acumulador[maiorOuMenor].push(valorAtual)
+            return acumulador
+        }, { maiores: [], menores: []})
+
+        console.log(pessoasAgrupadas)
+        /*********************************************/
+
+
+    </script>
+
+</body>
+
+</html>

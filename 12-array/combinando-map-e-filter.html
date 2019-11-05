@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript - Combinando os métodos "map()" e "filter()"</title>
+</head>
+
+<body>
+
+    <h1>Estudando JavaScript</h1>
+    <h2>Combinando os métodos "map()" e "filter()"</h2>
+
+
+    <script>
+        // Vamos brincar com estilos css via javaScript
+        let body = document.querySelector('body')
+        body.style.padding = '20px'
+        body.style.fontFamily = 'Sans-serif'
+        body.style.background = '#222'
+        body.style.color = '#FFF'
+    </script>
+
+
+    <script>
+
+        // Agora vamos praticar a combinação dos métodos "map()" e "filter()"
+        // - Vamos buscar na lista apnas os "números pares"
+        // - Depois vamos multiplicar estes numeros por "2"
+        const listaNumeros = [2, 3, 4, 6, 5, 10, 11, 12]
+        const novaListaNumero = listaNumeros.filter(numero => numero % 2 === 0).map(numero => numero * 2)
+        // const novoArrayNomes = nomes.map(nome => ` ${nome.toLowerCase()}`)
+        // const numerosFiltrados2 = listaNumeros.filter(numero => numero % 2 === 0)
+        console.log(`Files() e Map(): ${novaListaNumero}`)
+
+
+
+    </script>
+
+</body>
+
+</html>

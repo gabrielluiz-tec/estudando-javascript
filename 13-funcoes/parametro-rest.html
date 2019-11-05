@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Estudando JavaScript</h1>
+    <h2>Parâmetro Rest</h2>
+
+
+    <script>
+        // Vamos brincar com estilos css via javaScript
+        let body = document.querySelector('body')
+        body.style.padding = '20px'
+        body.style.fontFamily = 'Sans-serif'
+        body.style.background = '#222'
+        body.style.color = '#FFF'
+    </script>
+
+
+    <script>
+        // Vamos criar uma função que escreve o endereço
+
+        function escreverEndereco(rua, cidade, pais, ...complementos) {
+            console.log(rua)
+            console.log(cidade)
+            console.log(pais)
+            console.log(complementos)
+        }
+        escreverEndereco('Rua xxx', 'Porto Alegre', 'Brasil', 'Ap 999', 'Bloco xxx', 'Esquina Com Rua x')
+    </script>
+
+</body>
+
+</html>

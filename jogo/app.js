@@ -7,6 +7,7 @@ let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
 let listaNumeros = []
 let contador = 0
 
+debugger;
 // console.log(numeroAleatorio)
 // console.log(listaNumeros)
 

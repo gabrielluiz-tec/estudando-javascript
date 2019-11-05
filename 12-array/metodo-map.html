@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript - Método Map</title>
+</head>
+
+<body>
+
+    <h1>Estudando JavaScript</h1>
+    <h2>Método Map</h2>
+
+
+    <script>
+        // Vamos brincar com estilos css via javaScript
+        let body = document.querySelector('body')
+        body.style.padding = '20px'
+        body.style.fontFamily = 'Sans-serif'
+        body.style.background = '#222'
+        body.style.color = '#FFF'
+    </script>
+
+
+    <script>
+        // O método map() invoca a função callback passada por argumento para cada elemento do Array e devolve um novo Array como resultado.
+
+        // Sintaxe:
+        // arr.map(callback[, thisArg])
+
+
+        /*********************************************/
+        // Vamos relembrar o modo mais difícil
+        const listaNumeros = [2, 3, 6, 5, 10]
+        let novaListaNumeros = []
+        
+        for (let i = 0; i < listaNumeros.length; i++) {
+            novaListaNumeros.push(listaNumeros[i] * 2);
+        }
+        console.log(`Lista original: ${listaNumeros}`)
+        console.log(`Nova lista: ${novaListaNumeros}`)
+        /*********************************************/
+
+
+        /*********************************************/
+        // Usando o 'Método map()'
+        // O map vai iterar o array de números
+        // Depois vai aplicar uma função de callback
+        // No final o map retorna um novo array
+        // Por isso vamos atribuir o resultado a uma "nova variável"
+        const novoArrayMap = listaNumeros.map(
+            function(numero) {
+                return numero * 2
+            }
+        )
+        console.log(`Ex. Map: [ ${novoArrayMap} ]`)
+        /*********************************************/
+
+
+        /*********************************************/
+        // Agora vamos ver um exemplo utilizando "Arrow Functions e Retorno imediato"
+        const novoArrayArrowMap = listaNumeros.map(numero => numero * 2)
+        console.log(`Ex. Arrow e Map: [ ${novoArrayArrowMap} ]`)
+        /*********************************************/
+
+
+        /*********************************************/
+        // Mais um exemplo
+        const nomes = ['João', 'Maria', 'Pedro', 'Marcelo']
+        const novoArrayNomes = nomes.map(nome => ` ${nome.toLowerCase()}`)
+        console.log(`Nomes: [${novoArrayNomes} ]`)
+
+        /*********************************************/
+
+
+
+
+    </script>
+
+</body>
+
+</html>

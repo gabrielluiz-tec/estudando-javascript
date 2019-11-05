@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript - Funções de Callback</title>
+</head>
+
+<body>
+
+    <h1>Estudando JavaScript</h1>
+    <h2>Funções de Callback</h2>
+
+
+    <script>
+        // Vamos brincar com estilos css via javaScript
+        let body = document.querySelector('body')
+        body.style.padding = '20px'
+        body.style.fontFamily = 'Sans-serif'
+        body.style.background = '#222'
+        body.style.color = '#FFF'
+    </script>
+
+
+    <script>
+
+        function calcular(n1, n2, somaNumeros) {
+            return somaNumeros( n2 + n2)
+        }
+
+        let multiplicaPorDois = function(total) {
+            return total * 2
+        }
+
+        let dividePorDois = function(total) {
+            return total / 2
+        }
+
+        console.log(calcular(2, 5, multiplicaPorDois))
+        console.log(calcular(2, 5, dividePorDois))
+        
+
+
+    </script>
+
+</body>
+
+</html>

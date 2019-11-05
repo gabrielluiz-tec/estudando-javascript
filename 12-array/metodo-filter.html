@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudando JavaScript - Método Filter</title>
+</head>
+
+<body>
+
+    <h1>Estudando JavaScript</h1>
+    <h2>Método Filter</h2>
+
+
+    <script>
+        // Vamos brincar com estilos css via javaScript
+        let body = document.querySelector('body')
+        body.style.padding = '20px'
+        body.style.fontFamily = 'Sans-serif'
+        body.style.background = '#222'
+        body.style.color = '#FFF'
+    </script>
+
+
+    <script>
+        // O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+
+        // Sintaxe:
+        // var newArray = arr.filter(callback[, thisArg])
+
+
+        /*********************************************/
+        // Vamos relembrar o modo mais difícil para buscar "apenas números pares"
+        const listaNumeros = [2, 3, 4, 6, 5, 10, 11, 12]
+        let listaNumerosPares = []
+        
+        for (let i = 0; i < listaNumeros.length; i++) {
+            if (listaNumeros[i] % 2 === 0) {
+                listaNumerosPares.push(listaNumeros[i]);
+            }
+        }
+        console.log(`Lista original: ${listaNumeros}`)
+        console.log(`Nova lista: ${listaNumerosPares}`)
+        /*********************************************/
+
+
+        /*********************************************/
+        // Utilizando o "M´todo filter()"
+        const numerosFiltrados = listaNumeros.filter(
+            function(numero) {
+                if (numero % 2 === 0)
+                return numero
+            }
+        )
+        console.log(`Método filter(): ${numerosFiltrados}`)
+        /*********************************************/
+
+
+        /*********************************************/
+        // Utilizando o "Método filter()" e "Arrow Functions"
+        const numerosFiltrados2 = listaNumeros.filter(numero => numero % 2 === 0)
+        console.log(`Filter() e Arrow: ${numerosFiltrados2}`)
+        /*********************************************/
+
+    </script>
+
+</body>
+
+</html>
