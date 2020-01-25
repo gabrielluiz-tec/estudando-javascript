@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript - ES6</title>
+</head>
+<body>
+    
+
+    <script>
+        //********************************
+        // Operações em Arrays com ES6
+
+        const lista = [2, 44, 5, 10, 33]
+
+        // map()
+        /* A função map() percorre todo array a aplica a função 
+           determinada, depois retorna um novo array */
+        const parOuImpar = lista.map(function(item) {
+            return item % 2 === 0 ? 'par' : 'ímpar'
+        })
+        console.log('Ex. map() - 1:\n', parOuImpar)
+
+
+        //***************
+        // Exemplo 2:
+        const somaIndex = lista.map(
+            function(item, index) {
+                return item + index
+            }
+        )
+        console.log('Ex. map() - 2:\n', somaIndex)
+
+
+        //*************************************
+        // reduce()
+
+        /* A função reduce() é uma forma de consumir todo o array e retornar
+           um único valor, uma única variável */
+
+        const numeros = [2, 4, 6, 8, 10]
+        
+        const somaValores = numeros.reduce(
+            function(total, proximo) {
+                return total + proximo
+            }
+        )
+        console.log('Ex. reduce():\n', somaValores)
+
+
+        //*******************************************
+        // filter()
+
+        const listaNumeros = [2, 5, 10, 22, 23, 40, 80, 99]
+        
+        const listaNumerosPares = listaNumeros.filter(
+            function(numero) {
+                return numero % 2 === 0
+            }
+        )
+        console.log('Ex. filter():\n', listaNumerosPares)
+
+
+        //***********************************
+        // find()
+
+        const num = listaNumeros.find(
+            function(numero) {
+                /* Vai buscar no array um número igual a '10' 
+                   Se encontrar retorna o número
+                   Se não encontrar retorna 'undefined' */
+                return numero === 1000
+            }
+        )
+        console.log('Ex. find():\n', num)
+
+
+    </script>
+</body>
+</html>

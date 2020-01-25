@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript - ES6</title>
+</head>
+<body>
+    
+
+    <script>
+        //********************************
+        // Desestruturação no JavaScript
+
+        const usuario = {
+            nome: 'Marcelo',
+            sexo: 'M',
+            endereco: {
+                cidade: 'Porto Alegre', 
+                estado: 'RS',
+                bairro: 'Cidade Baixa'
+            }
+        }
+
+        // Como fazemos no ES5
+        // const nome = usuario.nome
+        // const sexo = usuario.sexo
+        // const cidade = usuario.endereco.cidade
+
+        // Como podemos fazer utilizando ES6
+        const { nome, sexo, endereco: { cidade } } = usuario
+        console.log(nome)
+        console.log(sexo)
+        console.log(cidade)
+
+        // Vamos ver um exemplo utilizando funções
+        // Usando ES5
+        function nostraDadosES5(dado) {
+            console.log('ES5', dado.endereco.cidade)
+        }
+        nostraDadosES5(usuario)
+
+        // Usando ES6
+        function nostraDadosES6( { nome, endereco: { bairro } } ) {
+            console.log('ES6', nome, bairro)
+        }
+        nostraDadosES6(usuario)
+
+
+    </script>
+</body>
+</html>

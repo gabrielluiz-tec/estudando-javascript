@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    
+    <div id="app">
+
+    </div>
+
+    <!-- Importando o Axios -->
+    <!-- O Axios vai nos ajudar a obter os dados de forma mais fácil -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+        // Basta informar o método http e url
+        axios.get('https://api.github.com/users/marcelopoars')
+            .then(function(response) {
+                console.log(response.data.avatar_url)
+            })
+            .catch(function(error) {
+                console.warn(error)
+            })
+    </script>
+</body>
+</html>

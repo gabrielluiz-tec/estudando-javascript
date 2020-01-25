@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript - ES6</title>
+</head>
+<body>
+    
+
+    <script>
+        //********************************
+        // const
+
+        // Uma constante não pode ter o seu valor 'reatribuido'
+        const a = 1
+
+        // Vai gerar um erro
+        // a = 3
+
+
+        // O que podemos fazer é "mutação"
+        // Ex.:
+        const usuario = { nome: 'Marcelo'}
+
+        // Aquui alteramos apenas a 'propriedade: nome'
+        usuario.nome = 'João'
+        console.log(usuario)
+
+
+        //*************************
+        // Variáveis de escopo
+        // Escopo é sempre que abre e fecha pares de "{}"
+        // let
+
+        function teste(x) {
+            let y = 2
+
+            if(x > 5) {
+                // Aqui podemos redeclarar a variável 'y'
+                // E depois atribuir um novo valor
+                let y = 4
+                console.log(x, y)
+            }
+        }
+
+        teste(8)
+        // Vai gerar um erro pois 'y' não tem escopo global
+        // console.log(y)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript - ES6</title>
+</head>
+<body>
+    <h1>Async / Await</h1>
+
+
+
+    <script>
+
+    //**********************************************
+    // Exemplo de promise com ES6 e ES8
+    const minhaPromise = () => new Promise((resolve, rejcet) => {
+        setTimeout(() => { resolve('OK') }, 2000)
+    })
+
+    // Sintaxe ES6
+    // minhaPromise()
+    // .then(response => {
+    //     console.log(response)
+    // })
+    // .catch(function(error) {
+    //     console.warn('Erroooouuuu', error)
+    // })
+
+    // Sintaxe ES8 (Async / await)
+    // async function executaPromise() {
+    //     console.log(await minhaPromise())
+    //     console.log(await minhaPromise())
+    //     console.log(await minhaPromise())
+    // }
+    // executaPromise()
+
+    // Sintaxe utilizando Arrow Function
+    const executaPromise = async () => {
+        console.log(await minhaPromise())
+        console.log(await minhaPromise())
+        console.log(await minhaPromise())
+    }
+    executaPromise()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function retornaSexo(sexo) {
+            if (sexo == 'M') {
+                return 'Masculino'
+            } else if (sexo== 'F') {
+                return 'Feminino'
+            } else {
+                return 'Indefinido'
+            }
+        }
+
+        var resultado = retornaSexo('M')
+        console.log(resultado)
+
+
+        // Switch Case
+        function retornaCor(cor) {
+            switch(cor) {
+                case 'verde':
+                    return 'A cor é verde'
+                case 'preto':
+                    return 'A cor é preto'
+                default:
+                    return 'Cor inválida'
+            }
+        }
+
+        console.log(retornaCor('preto'))
+        
+    </script>
+</body>
+</html>

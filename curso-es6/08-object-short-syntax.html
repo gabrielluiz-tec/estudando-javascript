@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript - ES6</title>
+</head>
+<body>
+    <h1>Object short syntax</h1>
+    <h3>Sintaxe curta de objeto</h3>
+
+
+
+    <script>
+
+        const nome = 'Marcelo'
+        const cidade = 'Porto Alegre'
+
+        // Usando ES5
+        const usuario1 = {
+            nome: nome,
+            cidade: cidade,
+            estado: 'RS'
+        }
+        console.log(usuario1)
+
+        // Usando ES6
+        /* Quando o nome da propriedade for igual ao nome da variável
+           pode ficar apena uma palavra */
+        const usuario2 = {
+            nome,
+            cidade,
+            bairro: 'Cidade Baixa'
+        }
+        console.log(usuario2)
+
+    
+
+    </script>
+</body>
+</html>

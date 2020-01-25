@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    
+    <div id="app">
+
+    </div>
+
+    <script>
+
+        var minhaPromise = function() {
+            // Promise é uma classe
+            return new Promise(function(resolve, rejcet) {
+                var xhr = new XMLHttpRequest()
+                xhr.open('GET', 'https://api.github.com/users/marcelopoars')
+                xhr.send(null)
+
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            // Chama o método "then()"
+                            resolve(JSON.parse(xhr.responseText))
+                        } else {
+                            // Chama o método "catch()"
+                            rejcet('Erro na requisição')
+                        }
+                    }
+                }
+            })
+        }
+
+        minhaPromise()
+            // Será executado quando chamar o resolve na promise
+            // Se retornar código 200 - tudo ok
+            .then(function(response) {
+                console.log(response)
+            })
+            .catch(function(error) {
+                console.warn(error)
+            })
+
+    
+    //**********************************************
+    // Outro exemplo de promise
+    const minhaPromise2 = () => new Promise((resolve, rejcet) => {
+        setTimeout(() => { resolve('OK') }, 5000)
+    })
+
+    minhaPromise2()
+    .then(response => {
+        console.log(response)
+    })
+    .catch(function(error) {
+        console.warn('Erroooouuuu', error)
+    })
+
+    </script>
+</body>
+</html>

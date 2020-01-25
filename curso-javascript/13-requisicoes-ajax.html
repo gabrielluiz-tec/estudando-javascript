@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    
+    <div id="app">
+
+    </div>
+
+    <script>
+
+        // Classe do Javascript que dá acesso a funcionalidade
+        // do AJAX para realizar requisições a servidores
+        var xhr = new XMLHttpRequest()
+
+        xhr.open('GET', 'https://api.github.com/users/marcelopoars')
+        xhr.send(null)
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                console.log(JSON.parse(xhr.responseText))
+            }
+        }
+        
+    </script>
+</body>
+</html>

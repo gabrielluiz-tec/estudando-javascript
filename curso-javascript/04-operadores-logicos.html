@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    
+
+    <script>
+        // Operadores lógicos
+        // AND, OR, NOT
+
+        var sexo = 'M', idade = 23
+
+        function retornaDados(sexo, idade) {
+
+            if (sexo == 'M' && idade >= 18) {
+                return 'Homem maior de idade'
+            }
+            else if (sexo == 'F' && idade >= 18) {
+                return 'Mulher maior de idade'
+            }
+            else if (sexo == 'M' && idade <= 18) {
+                return 'Menino menor de idade'
+            }
+            else {
+                return 'Menina menor de idade'
+            }
+
+        }
+
+        console.log(retornaDados('F', 14))
+
+    </script>
+</body>
+</html>

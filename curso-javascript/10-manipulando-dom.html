@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    
+    <div id="app">
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+        <input type="text" name="resultado" id="resultado">
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        // Manipulando a DOM
+        
+        // querySelector: retorna o elemento verificando a propriedade 'name'
+        var campoTexto = document.querySelector('input[name=resultado]')
+        console.log(campoTexto)
+        
+        // querySelector: retorna apena 01 elemento
+        var botao = document.querySelector('button')
+        console.log(botao)
+        
+        // querySelectorAll: retorna um array de elementos
+        var camposDeTexto = document.querySelectorAll('input')
+        console.log(camposDeTexto[0])
+
+        // Vamos criar uma função de click
+        botao.onclick = function() {
+            campoTexto.value = `Olá ${camposDeTexto[0].value}!`
+        }
+        
+
+    </script>
+</body>
+</html>

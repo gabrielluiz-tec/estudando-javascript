@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript - Exercício 1</title>
+</head>
+<body>
+
+    <!-- 
+        Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve aparecer na tela.
+    -->
+
+    <div id="app">
+        <button>Criar quadrado</button>
+    </div>
+
+
+    <script>
+        var botao = document.querySelector('button')
+        var app = document.querySelector('#app')
+
+        botao.onclick = function() {
+            var quadrado = document.createElement('div')
+            quadrado.style.width = '100px'
+            quadrado.style.height = '100px'
+            quadrado.style.backgroundColor = 'red'
+            quadrado.style.margin = '5px'
+            app.appendChild(quadrado)
+        }
+    
+    </script>
+
+</body>
+</html>

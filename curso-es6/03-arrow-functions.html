@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript - ES6</title>
+</head>
+<body>
+    
+
+    <script>
+        //********************************
+        // Arrow functions (ideal para funções anônimas)
+
+        const lista = [2, 3, 7, 34, 55]
+
+        // Função antiga - ES5
+        const novaLista = lista.map(
+            function(numero) {
+                return numero * 2
+            }
+        )
+        console.log('Ex. Função ES5:\n', novaLista)
+
+        // Usando Arrow Function - ES6
+        // Passos:
+        // - remover a palavra 'function'
+        // - colocar a '=>' entre (numero){ ... }
+        // - remover os parenteses do parâmetro (numero)
+        // - remover as chaves {} e a palavra 'return'
+        const novaListaArrow = lista.map(numero => numero * 2)
+
+        console.log('Ex. Arrow Function:\n', novaListaArrow)
+
+
+        //********************************************
+        /* Outro recusro interessante do ES6 é a possibilidade 
+           de criarmos funções utilizando constantes "const" */
+        
+        const teste = () => [1, 2, 3, 4, 5]
+        console.log(teste())
+
+        const teste2 = () => 555
+        console.log(teste2())
+
+        // Vai retornar 'undefined', pois as chaves fazem parte da função
+        const teste3 = () => { nome: 'Marcelo'}
+        console.log(teste3())
+
+        // Neste caso colocamos o objeto entre parenteses
+        const teste4 = () => ({ nome: 'Marcelo'})
+        console.log(teste4())
+        console.log(teste4().nome)
+        console.log(teste4().nome.length)
+
+
+
+    </script>
+</body>
+</html>

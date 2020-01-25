@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    
+    <div id="app">
+        <button>Remover link</button>
+        <br><br>
+    </div>
+
+    <script>
+        // Criando novos elementos
+        
+        var link = document.createElement('a')
+        link.setAttribute('href', 'http://google.com.br')
+        link.setAttribute('target', '_blank')
+
+        var textoLink = document.createTextNode('Visite meu site')
+        link.appendChild(textoLink)
+
+        var app = document.querySelector('#app')
+        app.appendChild(link)
+
+
+        /*********************************/
+        // Vamos crar uma funão para remover o link
+        // ao clicar no botão
+        botao = document.querySelector('button')
+        botao.onclick = function() {
+            app.removeChild(link)
+        }
+        
+    </script>
+</body>
+</html>
